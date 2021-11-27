@@ -100,8 +100,7 @@
 <h3><span class="section-number">1.1.1. </span>About this note<a class="headerlink" href="#about-this-note" title="Permalink to this headline">¶</a></h3>
 <p>This document is a summary of our valueable experiences in using <code class="docutils literal notranslate"><span class="pre">Python</span></code>
 for <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Scientist</span></code> daily work. The PDF version can be downloaded from <a class="reference external" href="sphinxgithub.pdf">HERE</a>.</p>
-<p><strong>You may download and distribute it. Please be aware, however, that the note contains typos
-as well as inaccurate or incorrect description.</strong></p>
+<p><strong>You may download and distribute it. Please be aware, however, that the note contains typos as well as inaccurate or incorrect description.</strong></p>
 <p>In this repository, we try to use the detailed <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Scientist</span></code> related demo code and
 examples to share some useful python tips for Data Scientist work. If you
 find your work wasn’t cited in this note, please feel free to let me know.</p>
@@ -109,33 +108,37 @@ find your work wasn’t cited in this note, please feel free to let me know.</p>
 We decided that it would be useful for us to share what we learned
 about Python in the form of easy note with detailed example.
 We hope those notes will be a valuable tool for your studies.</p>
-<p>The notes assume that the reader has a preliminary knowledge of <code class="docutils literal notranslate"><span class="pre">python</span></code> programing,
-<code class="docutils literal notranslate"><span class="pre">LaTex</span></code> and <code class="docutils literal notranslate"><span class="pre">Linux</span></code>. And this document is generated automatically by using <a class="reference external" href="http://sphinx.pocoo.org">sphinx</a>.
-More details can be found at <a class="reference internal" href="reference.html#georg2018" id="id2"><span>[Georg2018]</span></a>.</p>
+<p>The notes assume that the reader has a preliminary knowledge of <code class="docutils literal notranslate"><span class="pre">python</span></code> programing, <code class="docutils literal notranslate"><span class="pre">LaTex</span></code> and <code class="docutils literal notranslate"><span class="pre">Linux</span></code>. And this document is generated automatically by using <a class="reference external" href="http://sphinx.pocoo.org">sphinx</a>. More details can be found at <a class="reference internal" href="reference.html#georg2018" id="id2"><span>[Georg2018]</span></a>.</p>
 </div>
 <div class="section" id="about-the-authors">
 <h3><span class="section-number">1.1.2. </span>About the authors<a class="headerlink" href="#about-the-authors" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p><strong>Wenqiang Feng</strong></p>
 <ul class="simple">
-<li><p>Director of Data Science and PhD in Mathematics</p></li>
+<li><p>Data Scientist and PhD in Mathematics</p></li>
 <li><p>University of Tennessee, Knoxville</p></li>
 <li><p>Webpage: <a class="reference external" href="http://web.utk.edu/~wfeng1">http://web.utk.edu/~wfeng1</a></p></li>
 <li><p>Email: <a class="reference external" href="mailto:von198&#37;&#52;&#48;gmail&#46;com">von198<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 </ul>
-<p><strong>Jing Yang</strong></p>
+</li>
+<li><p><strong>Xu Gao</strong></p>
 <ul class="simple">
-<li><p>Senior Data Scientist and PhD in Physics</p></li>
-<li><p>Harvard University</p></li>
-<li><p>Github: <a class="reference external" href="https://github.com/flashjing">https://github.com/flashjing</a></p></li>
-<li><p>Email:</p></li>
+<li><p>Data Scientist/Quantitative Analyst and PhD in Statistics</p></li>
+<li><p>Statistics, University of California, Irvine</p></li>
+<li><p>Webpage: <a class="reference external" href="https://sites.google.com/view/xugao">https://sites.google.com/view/xugao</a></p></li>
+<li><p>Email: <a class="reference external" href="mailto:duncangao&#37;&#52;&#48;gmail&#46;com">duncangao<span>&#64;</span>gmail<span>&#46;</span>com</a>, <a class="reference external" href="mailto:xgao2&#37;&#52;&#48;uci&#46;edu">xgao2<span>&#64;</span>uci<span>&#46;</span>edu</a></p></li>
+</ul>
+</li>
+<li><p><strong>Upendra Madam</strong></p>
+<ul class="simple">
+<li><p>Senior Data Engineer</p></li>
+<li><p>Computer and Information Sciences</p></li>
+<li><p>University of Texas, Arlington</p></li>
+<li><p>Email: <a class="reference external" href="mailto:upendra1991&#37;&#52;&#48;gmail&#46;com">upendra1991<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 </ul>
 </li>
 <li><p><strong>Declaration</strong></p>
-<p>The work of Wenqiang Feng was supported by the IMA, while working at IMA.
-However, any opinion, finding, and conclusions or recommendations expressed in
-this material are those of the authors and do not necessarily reflect the views of the
-IMA, UTK, UCI, DST.</p>
+<p>The work of Wenqiang Feng was supported by the IMA, while working at IMA. However, any opinion, finding, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the IMA, UTK, UCI, DST and Google.</p>
 </li>
 </ul>
 </div>
@@ -144,10 +147,10 @@ IMA, UTK, UCI, DST.</p>
 <h2><span class="section-number">1.2. </span>Motivation for this note<a class="headerlink" href="#motivation-for-this-note" title="Permalink to this headline">¶</a></h2>
 <p>No matter you like it or not, Python has been one of the most popular programming languages.
 I have been using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for almost 4 years. Frankly speaking, I wasn’t impressed and attracted
-by <code class="docutils literal notranslate"><span class="pre">Python</span></code> at the first using. After starting working in industry, I have to use <code class="docutils literal notranslate"><span class="pre">Python</span></code>. Gradually
-I recognize the elegance of Python and use it as one of my main programming language. But I found that:</p>
+by <code class="docutils literal notranslate"><span class="pre">Python</span></code> at the first using. After starting working in industry, I have to use <code class="docutils literal notranslate"><span class="pre">Python</span></code>. Graduately
+I recognize the elegance of Python and use it as one of my main programming language. But I foud that:</p>
 <ul class="simple">
-<li><p>Most of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> books or tutorials which emphasize on programming will overwhelm the green hand.</p></li>
+<li><p>Most of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> books or tutorials which emphasize on programming will overwhelme the green hand.</p></li>
 <li><p>While most of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> books or tutorials for <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Scientist</span></code> or <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Analysis</span></code> didn’t cover some essential skills from the engineer side.</p></li>
 </ul>
 <p>So I want to keep some of my valuable tips which are heavily applied in my daily work.</p>
@@ -155,8 +158,7 @@ I recognize the elegance of Python and use it as one of my main programming lang
 <div class="section" id="feedback-and-suggestions">
 <h2><span class="section-number">1.3. </span>Feedback and suggestions<a class="headerlink" href="#feedback-and-suggestions" title="Permalink to this headline">¶</a></h2>
 <p>Your comments and suggestions are highly appreciated. I am more than happy to receive
-corrections, suggestions or feedbacks through email (Wenqiang Feng: <a class="reference external" href="mailto:von198&#37;&#52;&#48;gmail&#46;com">von198<span>&#64;</span>gmail<span>&#46;</span>com</a>, Jing Yang: )
-for improvements.</p>
+corrections, suggestions or feedbacks through email (Wenqiang Feng: <a class="reference external" href="mailto:von198&#37;&#52;&#48;gmail&#46;com">von198<span>&#64;</span>gmail<span>&#46;</span>com</a>, XuGao: <a class="reference external" href="mailto:duncangao&#37;&#52;&#48;gmail&#46;com">duncangao<span>&#64;</span>gmail<span>&#46;</span>com</a>) for improvements.</p>
 </div>
 </div>
 
@@ -172,7 +174,7 @@ for improvements.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 25, 2021.
+      <span class="lastupdated">Last updated on Nov 27, 2021.
       </span></p>
   </div>
 
