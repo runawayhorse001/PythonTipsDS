@@ -42,24 +42,17 @@ About the authors
 
 * **Wenqiang Feng** 
 	
-  * Data Scientist and PhD in Mathematics 
+  * Director of Data Science and PhD in Mathematics
   * University of Tennessee, Knoxville
   * Webpage: http://web.utk.edu/~wfeng1
   * Email: von198@gmail.com
 
-* **Xu Gao**
+* **Jing Yang**
 
-  * Data Scientist/Quantitative Analyst and PhD in Statistics  
-  * Statistics, University of California, Irvine
-  * Webpage: https://sites.google.com/view/xugao
-  * Email: duncangao@gmail.com, xgao2@uci.edu 
-
-* **Upendra Madam**
-
-  * Senior Data Engineer 
-  * Computer and Information Sciences 
-  * University of Texas, Arlington 
-  * Email: upendra1991@gmail.com
+  * Senior Data Scientist and PhD in Physics
+  * Harvard University
+  * Webpage: https://scholar.harvard.edu/jingyang/home
+  * Email:
 
 * **Declaration**
 
