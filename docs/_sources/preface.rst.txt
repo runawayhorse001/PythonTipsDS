@@ -56,7 +56,10 @@ About the authors
 
 * **Declaration**
 
-  The work of Wenqiang Feng was supported by the IMA, while working at IMA. However, any opinion, finding, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the IMA, UTK, UCI, DST and Google.
+  The work of Wenqiang Feng was supported by the IMA, while working at IMA. However,
+  any opinion, finding, and conclusions or recommendations expressed in this material
+  are those of the authors and do not necessarily reflect the views of the IMA, UTK,
+  DST and Harvard.
 
 
 Motivation for this note
@@ -65,11 +68,12 @@ Motivation for this note
 
 No matter you like it or not, Python has been one of the most popular programming languages.
 I have been using |py| for almost 4 years. Frankly speaking, I wasn't impressed and attracted 
-by |py| at the first using. After starting working in industry, I have to use |py|. Graduately
-I recognize the elegance of Python and use it as one of my main programming language. But I foud that:
+by |py| at the first using. After starting working in industry, I have to use |py|. Gradually
+I recognize the elegance of Python and use it as one of my main programming language. But I found that:
 
-* Most of the |py| books or tutorials which emphasize on programming will overwhelme the green hand. 
-* While most of the |py| books or tutorials for |ds| or |da| didn't cover some essential skills from the engineer side.
+* Most of the |py| books or tutorials which emphasize on programming will overwhelm the green hand.
+* While most of the |py| books or tutorials for |ds| or |da| didn't cover some essential skills
+  from the engineer side.
 
 So I want to keep some of my valuable tips which are heavily applied in my daily work. 
 
@@ -77,4 +81,5 @@ So I want to keep some of my valuable tips which are heavily applied in my daily
 Feedback and suggestions
 ++++++++++++++++++++++++
 Your comments and suggestions are highly appreciated. I am more than happy to receive 
-corrections, suggestions or feedbacks through email (Wenqiang Feng: von198@gmail.com, XuGao: duncangao@gmail.com) for improvements. 
+corrections, suggestions or feedbacks through email (Wenqiang Feng: von198@gmail.com,
+Jing Yang: ) for improvements.
