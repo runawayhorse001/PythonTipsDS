@@ -1,0 +1,37 @@
+.. _cred:
+
+
+===========
+Credentials 
+===========
+
+
+
+.. |nb| replace:: ``Jupyter Notebook``
+.. |zp| replace:: ``Zeppelin``
+.. |py| replace:: ``Python``
+.. |nt| replace:: ``Nteract``
+
+.. admonition:: Chinese proverb
+
+	Be mindful of guarding against harm from others, and stay away from placing harming upon others.
+
+If you are a real Data Scientist, you have to share your code with your colleagues or release your code for Code Review or Quality assurance(QA). You will definitely do not want to have your ``User Information`` in the code. So you can save them in login.txt:
+
+.. code-block:: rst
+
+	runawayhorse001
+	PythonTips
+
+and use the following code to import your ``User Information``:
+
+.. code-block:: python
+
+	#User Information
+	try: 
+	    login = pd.read_csv(r'login.txt', header=None)
+	    user = login[0][0]
+	    pw = login[0][1]
+	    print('User information is ready!')
+	except:
+	    print('Login information is not available!!!')

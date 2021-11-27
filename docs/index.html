@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contents &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Preface" href="preface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Python Tips for Data Scientist</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Contents</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <blockquote id="index">
+<div><div class="figure align-center" id="fig-logo">
+<img alt="_images/logo.png" src="_images/logo.png" />
+</div>
+</div></blockquote>
+<p>Welcome to my <strong>Python Tips for Data Scientist</strong> notes! In those notes, you will learn some useful tips for Data Scientist daily work. The PDF version can be downloaded from <a class="reference external" href="pythonTipsDS.pdf">HERE</a>.</p>
+<div class="section" id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about">1.1. About</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#about-this-note">1.1.1. About this note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#about-the-authors">1.1.2. About the authors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#motivation-for-this-note">1.2. Motivation for this note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback-and-suggestions">1.3. Feedback and suggestions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nb.html#nteract">3.1. Nteract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nb.html#jupyter-notebook-viewer">3.2. Jupyter Notebook Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nb.html#apache-zeppelin">3.3. Apache Zeppelin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nb.html#jupyter-notebook">3.4. Jupyter Notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="primer.html#id1">5.1. <code class="docutils literal notranslate"><span class="pre">*</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer.html#range">5.2. <code class="docutils literal notranslate"><span class="pre">range</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer.html#random">5.3. <code class="docutils literal notranslate"><span class="pre">random</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="primer.html#random-random">5.3.1. <code class="docutils literal notranslate"><span class="pre">random.random</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="primer.html#np-random">5.3.2. <code class="docutils literal notranslate"><span class="pre">np.random</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="primer.html#round">5.4. <code class="docutils literal notranslate"><span class="pre">round</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer.html#todo">5.5. TODO..</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="struct.html#list">6.1. List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#create-list">6.1.1. Create list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#unpack-list">6.1.2. Unpack list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#methods-of-list-objects">6.1.3. Methods of list objects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct.html#tuple">6.2. Tuple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct.html#dictionary">6.3. Dictionary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#create-dict-from-lists">6.3.1. Create <code class="docutils literal notranslate"><span class="pre">dict</span></code> from lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#dict-get">6.3.2. <code class="docutils literal notranslate"><span class="pre">dict.get()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#looping-techniques">6.3.3. Looping Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#update-values-in-dict">6.3.4. Update Values in Dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#update-keys-in-dict">6.3.5. Update Keys in Dict</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="struct.html#one-line-if-else-statement">6.4. One line if-else statement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#with-filter">6.4.1. With filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct.html#without-filter">6.4.2. Without filter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ingest.html#data-ingestion-from-local-to-database">7.1. Data Ingestion from Local to DataBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest.html#data-read-from-database-to-local">7.2. Data Read from DataBase to Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest.html#hive-and-impala-tabel-ingestion">7.3. Hive and Impala Tabel Ingestion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pd.html#todo">8.1. TODO..</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rdd.html#todo">9.1. TODO..</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#create-dataframe">10.1. Create DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-list">10.1.1. From List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-dict">10.1.2. From Dict</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#load-dataframe">10.2. Load DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-database">10.2.1. From DataBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-csv">10.2.2. From <code class="docutils literal notranslate"><span class="pre">.csv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-json">10.2.3. From <code class="docutils literal notranslate"><span class="pre">.json</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#first-n-rows">10.3. First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#column-names">10.4. Column Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#data-types">10.5. Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#replace-data-types">10.6. Replace Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#fill-null">10.7. Fill Null</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#replace-values">10.8. Replace Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#rename-columns">10.9. Rename Columns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#rename-all-columns">10.9.1. Rename all columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#rename-one-or-more-columns">10.9.2. Rename one or more columns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#drop-columns">10.10. Drop Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#filter">10.11. Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#with-new-column">10.12. With New Column</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#join">10.13. Join</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#left-join">10.13.1. Left Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#right-join">10.13.2. Right Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#inner-join">10.13.3. Inner Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#full-join">10.13.4. Full Join</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#concat-columns">10.14. Concat Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#groupby">10.15. GroupBy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#pivot">10.16. Pivot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#unixtime-to-date">10.17. Unixtime to Date</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kaggle.html#todo">11.1. TODO..</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pack.html#hierarchical-structure">12.1. Hierarchical Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pack.html#set-up">12.2. Set Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pack.html#requirements">12.3. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pack.html#readme">12.4. ReadMe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pypi.html#register-pypi-account">13.1. Register PyPI account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pypi.html#install-twine">13.2. Install <code class="docutils literal notranslate"><span class="pre">twine</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pypi.html#build-your-package">13.3. Build Your Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pypi.html#upload-your-package">13.4. Upload Your Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pypi.html#package-at-pypi">13.5. Package at PyPI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#install-flask">14.1. Install <code class="docutils literal notranslate"><span class="pre">flask</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#train-and-save-your-model">14.2. Train and Save your model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#deplyment-with-flask">14.3. Deplyment with Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html#lunch-your-app-on-server">14.4. Lunch your app on server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deploy.html#lunch-the-app">14.4.1. 1. Lunch the APP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deploy.html#run-the-app">14.4.2. 2. Run the APP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#basics-module">15.1. Basics Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-statspy.basics">15.1.1. <code class="docutils literal notranslate"><span class="pre">rnorm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#dnorm">15.1.2. <code class="docutils literal notranslate"><span class="pre">dnorm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#runif">15.1.3. <code class="docutils literal notranslate"><span class="pre">runif</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#tests-module">15.2. Tests Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#module-statspy.tests">15.2.1. <code class="docutils literal notranslate"><span class="pre">T-test</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="preface.html" class="btn btn-neutral float-right" title="1. Preface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
+      <span class="lastupdated">Last updated on Nov 25, 2021.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

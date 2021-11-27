@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Preface &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Python Installation" href="install.html" />
+    <link rel="prev" title="Contents" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about">1.1. About</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-this-note">1.1.1. About this note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-authors">1.1.2. About the authors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#motivation-for-this-note">1.2. Motivation for this note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feedback-and-suggestions">1.3. Feedback and suggestions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python Tips for Data Scientist</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">1. </span>Preface</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/preface.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="preface">
+<span id="id1"></span><h1><span class="section-number">1. </span>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-chinese-proverb admonition">
+<p class="admonition-title">Chinese proverb</p>
+<p>The palest ink is better than the best memory. – old Chinese proverb</p>
+</div>
+<div class="section" id="about">
+<h2><span class="section-number">1.1. </span>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="about-this-note">
+<h3><span class="section-number">1.1.1. </span>About this note<a class="headerlink" href="#about-this-note" title="Permalink to this headline">¶</a></h3>
+<p>This document is a summary of our valueable experiences in using <code class="docutils literal notranslate"><span class="pre">Python</span></code>
+for <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Scientist</span></code> daily work. The PDF version can be downloaded from <a class="reference external" href="sphinxgithub.pdf">HERE</a>.</p>
+<p><strong>You may download and distribute it. Please be aware, however, that the note contains typos
+as well as inaccurate or incorrect description.</strong></p>
+<p>In this repository, we try to use the detailed <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Scientist</span></code> related demo code and
+examples to share some useful python tips for Data Scientist work. If you
+find your work wasn’t cited in this note, please feel free to let me know.</p>
+<p>Although we are by no means a python programming and Data Scientist expert,
+We decided that it would be useful for us to share what we learned
+about Python in the form of easy note with detailed example.
+We hope those notes will be a valuable tool for your studies.</p>
+<p>The notes assume that the reader has a preliminary knowledge of <code class="docutils literal notranslate"><span class="pre">python</span></code> programing,
+<code class="docutils literal notranslate"><span class="pre">LaTex</span></code> and <code class="docutils literal notranslate"><span class="pre">Linux</span></code>. And this document is generated automatically by using <a class="reference external" href="http://sphinx.pocoo.org">sphinx</a>.
+More details can be found at <a class="reference internal" href="reference.html#georg2018" id="id2"><span>[Georg2018]</span></a>.</p>
+</div>
+<div class="section" id="about-the-authors">
+<h3><span class="section-number">1.1.2. </span>About the authors<a class="headerlink" href="#about-the-authors" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><strong>Wenqiang Feng</strong></p>
+<ul class="simple">
+<li><p>Director of Data Science and PhD in Mathematics</p></li>
+<li><p>University of Tennessee, Knoxville</p></li>
+<li><p>Webpage: <a class="reference external" href="http://web.utk.edu/~wfeng1">http://web.utk.edu/~wfeng1</a></p></li>
+<li><p>Email: <a class="reference external" href="mailto:von198&#37;&#52;&#48;gmail&#46;com">von198<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ul>
+<p><strong>Jing Yang</strong></p>
+<ul class="simple">
+<li><p>Senior Data Scientist and PhD in Physics</p></li>
+<li><p>Harvard University</p></li>
+<li><p>Github: <a class="reference external" href="https://github.com/flashjing">https://github.com/flashjing</a></p></li>
+<li><p>Email:</p></li>
+</ul>
+</li>
+<li><p><strong>Declaration</strong></p>
+<p>The work of Wenqiang Feng was supported by the IMA, while working at IMA.
+However, any opinion, finding, and conclusions or recommendations expressed in
+this material are those of the authors and do not necessarily reflect the views of the
+IMA, UTK, UCI, DST.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="motivation-for-this-note">
+<h2><span class="section-number">1.2. </span>Motivation for this note<a class="headerlink" href="#motivation-for-this-note" title="Permalink to this headline">¶</a></h2>
+<p>No matter you like it or not, Python has been one of the most popular programming languages.
+I have been using <code class="docutils literal notranslate"><span class="pre">Python</span></code> for almost 4 years. Frankly speaking, I wasn’t impressed and attracted
+by <code class="docutils literal notranslate"><span class="pre">Python</span></code> at the first using. After starting working in industry, I have to use <code class="docutils literal notranslate"><span class="pre">Python</span></code>. Gradually
+I recognize the elegance of Python and use it as one of my main programming language. But I found that:</p>
+<ul class="simple">
+<li><p>Most of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> books or tutorials which emphasize on programming will overwhelm the green hand.</p></li>
+<li><p>While most of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> books or tutorials for <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Scientist</span></code> or <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Analysis</span></code> didn’t cover some essential skills from the engineer side.</p></li>
+</ul>
+<p>So I want to keep some of my valuable tips which are heavily applied in my daily work.</p>
+</div>
+<div class="section" id="feedback-and-suggestions">
+<h2><span class="section-number">1.3. </span>Feedback and suggestions<a class="headerlink" href="#feedback-and-suggestions" title="Permalink to this headline">¶</a></h2>
+<p>Your comments and suggestions are highly appreciated. I am more than happy to receive
+corrections, suggestions or feedbacks through email (Wenqiang Feng: <a class="reference external" href="mailto:von198&#37;&#52;&#48;gmail&#46;com">von198<span>&#64;</span>gmail<span>&#46;</span>com</a>, Jing Yang: )
+for improvements.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-right" title="2. Python Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
+      <span class="lastupdated">Last updated on Nov 25, 2021.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

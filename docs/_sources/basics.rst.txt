@@ -1,0 +1,7 @@
+.. _basics:
+
+======================
+Python Language Basics
+======================
+
+This Chapter :ref:`basics` is for beginner.

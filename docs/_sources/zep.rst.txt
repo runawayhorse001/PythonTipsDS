@@ -1,0 +1,16 @@
+.. _zep:
+
+===============
+Apache Zeppelin
+===============
+
+.. |nb| replace:: ``Jupyter Notebook``
+.. |zp| replace:: ``Zeppelin``
+.. |py| replace:: ``Python``
+
+.. note::
+
+	This Chapter :ref:`zep` is for beginner.  If you have some |py| programming experience, you may skip this chapter. 
+
+The |zp| (Apache Zeppelin) is an open-source Web-based notebook that enables data-driven, 
+interactive data analytics and collaborative documents with |py|, ``PySpark``, ``SQL``, ``Scala`` and more.
