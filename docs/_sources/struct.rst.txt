@@ -116,6 +116,44 @@ Methods of list objects:
 | list. ``copy()``            | Return a shallow copy [#f1]_ of list|
 +-----------------------------+-------------------------------------+
 
+list.append(x) vs. list.extend(iterable)
+----------------------------------------
+
+The difference of list. ``append(x)`` vs. list. ``extend(iterable)`` is easy to understand
+from the example below:
+
+|eg|
+
+	.. code-block:: python
+
+        list1 = ['A','B','C']
+        list2 = ['D','E','F']
+        list1.append(list2)
+        print(list1)
+
+|out|
+
+	.. code-block:: python
+
+		['A', 'B', 'C', ['D', 'E', 'F']]
+
+
+|eg|
+
+	.. code-block:: python
+
+        list1 = ['A','B','C']
+        list2 = ['D','E','F']
+        list1.extend(list2)
+        print(list1)
+
+|out|
+
+	.. code-block:: python
+
+		['A', 'B', 'C', 'D', 'E', 'F']
+
+
 .. rubric:: Footnotes
 
 .. [#f1] Shallow Copy vs Deep Copy Reference: https://stackoverflow.com/posts/184780/revisions

@@ -117,12 +117,15 @@ Methods of list objects:
 +-----------------------------+-------------------------------------+
 
 list.append(x) vs. list.extend(iterable)
------------
-The difference of list. ``append(x)`` vs. list. ``extend(iterable)` is easy to understand from the example below:
+----------------------------------------
+
+The difference of list. ``append(x)`` vs. list. ``extend(iterable)`` is easy to understand
+from the example below:
 
 |eg|
 
 	.. code-block:: python
+
         list1 = ['A','B','C']
         list2 = ['D','E','F']
         list1.append(list2)
