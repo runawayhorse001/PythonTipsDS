@@ -52,7 +52,7 @@ About the authors
   * Senior Data Scientist and PhD in Physics
   * Harvard University
   * Webpage: https://scholar.harvard.edu/jingyang/home
-  * Email:
+  * Email: jingyangharvard@gmail.com
 
 * **Declaration**
 
@@ -82,4 +82,4 @@ Feedback and suggestions
 ++++++++++++++++++++++++
 Your comments and suggestions are highly appreciated. I am more than happy to receive 
 corrections, suggestions or feedbacks through email (Wenqiang Feng: von198@gmail.com,
-Jing Yang: ) for improvements.
+Jing Yang: jingyangharvard@gmail.com ) for improvements.
