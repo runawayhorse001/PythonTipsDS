@@ -124,7 +124,7 @@ from the example below:
 
 |eg|
 
-	.. code-block:: python
+    .. code-block:: python
 
         list1 = ['A','B','C']
         list2 = ['D','E','F']
@@ -137,15 +137,15 @@ from the example below:
 
 		['A', 'B', 'C', ['D', 'E', 'F']]
 
-
 |eg|
 
-	.. code-block:: python
+    .. code-block:: python
 
         list1 = ['A','B','C']
         list2 = ['D','E','F']
         list1.extend(list2)
         print(list1)
+
 
 |out|
 
