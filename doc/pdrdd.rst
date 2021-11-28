@@ -2,7 +2,7 @@
 
 
 ====================================
-``pd.DataFrame`` vs ``pd.DataFrame``  
+``pd.DataFrame`` vs ``PySpark DataFrame``
 ====================================
 
 
