@@ -83,15 +83,15 @@ From Dict
 
 .. code-block:: python
 
-	d = {'A': [0, 1, 0],
-	     'B': [1, 0, 1],
-	     'C': [1, 0, 0]}
+	data = {'A': [0, 1, 0],
+	        'B': [1, 0, 1],
+	        'C': [1, 0, 0]}
 
 |pyc|
 
 .. code-block:: python
 
-	pd.DataFrame(d)for 
+	pd.DataFrame(data)
 	# Tedious for PySpark
  	spark.createDataFrame(np.array(list(d.values())).T.tolist(),list(d.keys())).show()
 
@@ -851,7 +851,14 @@ Concat Columns
 
 .. code-block:: python
 
+    # one (or both) of the columns are not string typed, convert it (them) first to string,
+	pandas_df['concat'] = pandas_df['col1'] + pandas_df['col2'].astype(str)
+	# alternatively
 	pandas_df['concat'] = pandas_df.apply(lambda x:'%s%s'%(x['col1'],x['col2']),axis=1)
+
+    # don't use pandas_df['concat'] = pandas_df[['col1', 'col2']].apply(lambda x: ''.join(x), axis=1)
+    # note it will error out as expecting both fields are strings
+    #
 	pandas_df
 	#
 	spark_df.withColumn('concat',F.concat('col1','col2')).show()
