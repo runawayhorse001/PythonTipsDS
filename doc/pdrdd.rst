@@ -11,7 +11,7 @@
 .. |zp| replace:: ``Zeppelin``
 .. |py| replace:: ``Python``
 .. |pyc| replace:: ``:: Python Code:``
-.. |out| replace:: ``:: Ouput:``
+.. |out| replace:: ``:: Output:``
 .. |eg| replace:: ``:: Example:``
 .. |comp| replace:: ``:: Comparison:``
 
@@ -56,7 +56,7 @@ From List
 
 .. attention::
 
-   Pay attentation to the parameter ``columns=`` in ``pd.DataFrame``. Since the default value will make the list as rows.
+   Pay attention to the parameter ``columns=`` in ``pd.DataFrame``. Since the default value will make the list as rows.
 
 
 	|pyc|
@@ -107,6 +107,30 @@ From Dict
 	2  0  1  0         |  0|  1|  0|
 	                   +---+---+---+
 
+Convert between pandas and pyspark DataFrame
+++++++++++++++++++++++++++++++++++++++++++++
+
+From pandas to pyspark DataFrame
+--------------------------------
+|eg|
+
+.. code-block:: python
+
+    # pd.DataFrame pandas_df: DataFrame pandas
+    # rdd.DataFrame. spark_df: DataFrame spark
+    pandas_df = pd.read_csv('Advertising.csv')
+    spark_df = spark.createDataFrame(pandas_df)
+    spark_df.printSchema()
+
+From pyspark to pandas DataFrame
+--------------------------------
+|eg|
+
+.. code-block:: python
+
+    pandas_df = spark_df.toPandas()
+    pandas_df.info()
+
 Load DataFrame
 ++++++++++++++
 
@@ -150,19 +174,19 @@ and use the following code to import your ``User Information``:
 	      select *
 	      from {table_name}
 	      """.format(table_name=table_name)
-	dp = pd.read_sql(sql, conn)
+	pandas_df = pd.read_sql(sql, conn)
 
 .. code-block:: python
 
 	# connect to database
 	url = 'jdbc:postgresql://'+host+':5432/'+db_name+'?user='+user+'&password='+pw
 	properties ={'driver': 'org.postgresql.Driver', 'password': pw,'user': user}
-	ds = spark.read.jdbc(url=url, table=table_name, properties=properties)
+	spark_df = spark.read.jdbc(url=url, table=table_name, properties=properties)
 
 
 .. attention::
 
-	Reading tables from Database with PySpark needs the proper drive for the corresponding Database. For example, the above demo needs org.postgresql.Driver and you need to download it and put it in ``jars`` folder of your spark installation path. I download postgresql-42.1.1.jar from the official website and put it in jars folder.
+	Reading tables from Database with PySpark neespark_df the proper drive for the corresponding Database. For example, the above demo neespark_df org.postgresql.Driver and you need to download it and put it in ``jars`` folder of your spark installation path. I download postgresql-42.1.1.jar from the official website and put it in jars folder.
 
 From ``.csv``
 -------------
@@ -171,10 +195,10 @@ From ``.csv``
 
 .. code-block:: python
 
-	# pd.DataFrame dp: DataFrame pandas
-	dp = pd.read_csv('Advertising.csv')
-	#rdd.DataFrame. dp: DataFrame spark 
-	ds = spark.read.csv(path='Advertising.csv',
+	# pd.DataFrame pandas_df: DataFrame pandas
+	pandas_df = pd.read_csv('Advertising.csv')
+	#rdd.DataFrame. spark_df: DataFrame spark
+	spark_df = spark.read.csv(path='Advertising.csv',
 	#                sep=',',
 	#                encoding='UTF-8',
 	#                comment=None,
@@ -189,16 +213,16 @@ Data from: http://api.luftdaten.info/static/v1/data.json
 
 .. code-block:: python
 
-	dp = pd.read_json("data/data.json")
-	ds = spark.read.json('data/data.json')
+	pandas_df = pd.read_json("data/data.json")
+	spark_df = spark.read.json('data/data.json')
 
 |pyc|
 
 .. code-block:: python
 
-	dp[['id','timestamp']].head(4)
+	pandas_df[['id','timestamp']].head(4)
 	#
-	ds[['id','timestamp']].show(4)
+	spark_df[['id','timestamp']].show(4)
 
 |comp|
 
@@ -223,9 +247,9 @@ First ``n`` Rows
 
 .. code-block:: python
 
-	dp.head(4) 
+	pandas_df.head(4)
 	# 
-	ds.show(4)
+	spark_df.show(4)
 
 |comp|
 
@@ -248,9 +272,9 @@ Column Names
 
 .. code-block:: python
 
-	dp.columns
+	pandas_df.columns
 	#
-	ds.columns
+	spark_df.columns
 
 |comp|
 
@@ -267,9 +291,9 @@ Data types
 
 .. code-block:: python
 
-	dp.dtypes
+	pandas_df.dtypes
 	#
-	ds.dtypes
+	spark_df.dtypes
 
 |comp|
 
@@ -295,10 +319,10 @@ Replace Data types
 	col_name = ['col1', 'col2', 'col3']
 
 
-	dp = pd.DataFrame(my_list,columns=col_name)
-	ds = spark.createDataFrame(dp)
+	pandas_df = pd.DataFrame(my_list,columns=col_name)
+	spark_df = spark.createDataFrame(pandas_df)
 
-	dp.dtypes
+	pandas_df.dtypes
 
 .. code-block:: python
 
@@ -313,8 +337,8 @@ Replace Data types
 .. code-block:: python
 
 	d = {'col2': 'string','col3':'string'}
-	dp = dp.astype({'col2': 'str','col3':'str'})
-	ds = ds.select(*list(set(ds.columns)-set(d.keys())),
+	pandas_df = pandas_df.astype({'col2': 'str','col3':'str'})
+	spark_df = spark_df.select(*list(set(spark_df.columns)-set(d.keys())),
 	               *(col(c[0]).astype(c[1]).alias(c[0]) for c in d.items()))
 
 |comp|
@@ -334,11 +358,11 @@ Fill Null
 .. code-block:: python
 
 	my_list = [['a', 1, None], ['b', 2, 3],['c', 3, 4]]
-	dp = pd.DataFrame(my_list,columns=['A', 'B', 'C'])
-	ds = spark.createDataFrame(my_list, ['A', 'B', 'C'])
+	pandas_df = pd.DataFrame(my_list,columns=['A', 'B', 'C'])
+	spark_df = spark.createDataFrame(my_list, ['A', 'B', 'C'])
 	#
-	dp.head()
-	ds.show()
+	pandas_df.head()
+	spark_df.show()
 
 |comp|
 
@@ -357,9 +381,9 @@ Fill Null
 
 .. code-block:: python
 
-	dp.fillna(-99)
+	pandas_df.fillna(-99)
 	#
-	ds.fillna(-99).show()
+	spark_df.fillna(-99).show()
 
 |comp|
 
@@ -381,10 +405,10 @@ Replace Values
 .. code-block:: python
 
 	# caution: you need to chose specific col
-	dp.A.replace(['male', 'female'],[1, 0], inplace=True)
-	dp
+	pandas_df.A.replace(['male', 'female'],[1, 0], inplace=True)
+	pandas_df
 	#caution: Mixed type replacements are not supported
-	ds.na.replace(['male','female'],['1','0']).show()
+	spark_df.na.replace(['male','female'],['1','0']).show()
 
 
 |comp|
@@ -409,10 +433,10 @@ Rename all columns
 
 .. code-block:: python
 
-	dp.columns = ['a','b','c','d']
-	dp.head(4)
+	pandas_df.columns = ['a','b','c','d']
+	pandas_df.head(4)
 	#
-	ds.toDF('a','b','c','d').show(4)
+	spark_df.toDF('a','b','c','d').show(4)
 
 
 |comp|
@@ -441,10 +465,10 @@ Rename one or more columns
 
 .. code-block:: python
 
-	dp.rename(columns=mapping).head(4)
+	pandas_df.rename(columns=mapping).head(4)
 	#
-	new_names = [mapping.get(col,col) for col in ds.columns]
-	ds.toDF(*new_names).show(4)
+	new_names = [mapping.get(col,col) for col in spark_df.columns]
+	spark_df.toDF(*new_names).show(4)
 
 |comp|
 
@@ -468,7 +492,7 @@ Rename one or more columns
 
 	.. code-block:: python
 
-		ds.withColumnRenamed('Newspaper','Paper').show(4
+		spark_df.withColumnRenamed('Newspaper','Paper').show(4
 
 	|comp|
 
@@ -496,9 +520,9 @@ Drop Columns
 
 .. code-block:: python
 
-	dp.drop(drop_name,axis=1).head(4)
+	pandas_df.drop(drop_name,axis=1).head(4)
 	#
-	ds.drop(*drop_name).show(4)
+	spark_df.drop(*drop_name).show(4)
 
 |comp|
 
@@ -519,9 +543,9 @@ Filter
 
 .. code-block:: python
 
-	dp = pd.read_csv('Advertising.csv')
+	pandas_df = pd.read_csv('Advertising.csv')
 	#
-	ds = spark.read.csv(path='Advertising.csv',
+	spark_df = spark.read.csv(path='Advertising.csv',
 	                    header=True, 
 	                    inferSchema=True)
 
@@ -529,9 +553,9 @@ Filter
 
 .. code-block:: python
 
-	dp[dp.Newspaper<20].head(4)
+	pandas_df[pandas_df.Newspaper<20].head(4)
 	#
-	ds[ds.Newspaper<20].show(4)
+	spark_df[spark_df.Newspaper<20].show(4)
 
 
 |comp|
@@ -552,9 +576,9 @@ Filter
 
 .. code-block:: python
 
-	dp[(dp.Newspaper<20)&(dp.TV>100)].head(4)
+	pandas_df[(pandas_df.Newspaper<20)&(pandas_df.TV>100)].head(4)
 	#
-	ds[(ds.Newspaper<20)&(ds.TV>100)].show(4)
+	spark_df[(spark_df.Newspaper<20)&(spark_df.TV>100)].show(4)
 
 |comp|
 
@@ -578,10 +602,10 @@ With New Column
 
 .. code-block:: python
 
-	dp['tv_norm'] = dp.TV/sum(dp.TV)
-	dp.head(4)
+	pandas_df['tv_norm'] = pandas_df.TV/sum(pandas_df.TV)
+	pandas_df.head(4)
 	#
-	ds.withColumn('tv_norm', ds.TV/ds.groupBy().agg(F.sum("TV")).collect()[0][0]).show(4)
+	spark_df.withColumn('tv_norm', spark_df.TV/spark_df.groupBy().agg(F.sum("TV")).collect()[0][0]).show(4)
 
 |comp|
 
@@ -601,10 +625,10 @@ With New Column
 
 .. code-block:: python
 
-	dp['cond'] = dp.apply(lambda c: 1 if ((c.TV>100)&(c.Radio<40)) else 2 if c.Sales> 10 else 3,axis=1)
+	pandas_df['cond'] = pandas_df.apply(lambda c: 1 if ((c.TV>100)&(c.Radio<40)) else 2 if c.Sales> 10 else 3,axis=1)
 	#
-	ds.withColumn('cond',F.when((ds.TV>100)&(ds.Radio<40),1)\
-	                      .when(ds.Sales>10, 2)\
+	spark_df.withColumn('cond',F.when((spark_df.TV>100)&(spark_df.Radio<40),1)\
+	                      .when(spark_df.Sales>10, 2)\
 	                      .otherwise(3)).show(4)
 
 |comp|
@@ -625,10 +649,10 @@ With New Column
 
 .. code-block:: python
 
-	dp['log_tv'] = np.log(dp.TV)
-	dp.head(4)
+	pandas_df['log_tv'] = np.log(pandas_df.TV)
+	pandas_df.head(4)
 	#
-	ds.withColumn('log_tv',F.log(ds.TV)).show(4)
+	spark_df.withColumn('log_tv',F.log(spark_df.TV)).show(4)
 
 |comp|
 
@@ -648,10 +672,10 @@ With New Column
 
 .. code-block:: python
 
-	dp['tv+10'] = dp.TV.apply(lambda x: x+10)
-	dp.head(4)
+	pandas_df['tv+10'] = pandas_df.TV.apply(lambda x: x+10)
+	pandas_df.head(4)
 	#
-	ds.withColumn('tv+10', ds.TV+10).show(4)
+	spark_df.withColumn('tv+10', spark_df.TV+10).show(4)
 
 |comp|
 
@@ -810,8 +834,8 @@ Concat Columns
 	           ('c', 8, 9)]
 	col_name = ['col1', 'col2', 'col3']
 	#
-	dp = pd.DataFrame(my_list,columns=col_name)
-	ds = spark.createDataFrame(my_list,schema=col_name)
+	pandas_df = pd.DataFrame(my_list,columns=col_name)
+	spark_df = spark.createDataFrame(my_list,schema=col_name)
 
 .. code-block:: python
 
@@ -827,10 +851,10 @@ Concat Columns
 
 .. code-block:: python
 
-	dp['concat'] = dp.apply(lambda x:'%s%s'%(x['col1'],x['col2']),axis=1)
-	dp
+	pandas_df['concat'] = pandas_df.apply(lambda x:'%s%s'%(x['col1'],x['col2']),axis=1)
+	pandas_df
 	#
-	ds.withColumn('concat',F.concat('col1','col2')).show()
+	spark_df.withColumn('concat',F.concat('col1','col2')).show()
 
 |comp|
 
@@ -854,9 +878,9 @@ GroupBy
 
 .. code-block:: python
 
-	dp.groupby(['col1']).agg({'col2':'min','col3':'mean'})
+	pandas_df.groupby(['col1']).agg({'col2':'min','col3':'mean'})
 	#
-	ds.groupBy(['col1']).agg({'col2': 'min', 'col3': 'avg'}).show()
+	spark_df.groupBy(['col1']).agg({'col2': 'min', 'col3': 'avg'}).show()
 
 |comp|
 
@@ -877,9 +901,9 @@ Pivot
 
 .. code-block:: python
 
-	pd.pivot_table(dp, values='col3', index='col1', columns='col2', aggfunc=np.sum)
+	pd.pivot_table(pandas_df, values='col3', index='col1', columns='col2', aggfunc=np.sum)
 	#
-	ds.groupBy(['col1']).pivot('col2').sum('col3').show()
+	spark_df.groupBy(['col1']).pivot('col2').sum('col3').show()
 
 |comp|
 
@@ -904,20 +928,20 @@ Unixtime to Date
 	my_list = [['a', int("1284101485")], ['b', int("2284101485")],['c', int("3284101485")]]
 	col_name = ['A', 'ts']
 
-	dp = pd.DataFrame(my_list,columns=col_name)
-	ds = spark.createDataFrame(dp)
+	pandas_df = pd.DataFrame(my_list,columns=col_name)
+	spark_df = spark.createDataFrame(pandas_df)
 
 
 |pyc|
 
 .. code-block:: python
 
-	dp['datetime'] = pd.to_datetime(dp['ts'], unit='s').dt.tz_localize('UTC')
-	dp
+	pandas_df['datetime'] = pd.to_datetime(pandas_df['ts'], unit='s').dt.tz_localize('UTC')
+	pandas_df
 
 	spark.conf.set("spark.sql.session.timeZone", "UTC")
 	from pyspark.sql.types import DateType
-	ds.withColumn('date', F.from_unixtime('ts')).show() #.cast(DateType())
+	spark_df.withColumn('date', F.from_unixtime('ts')).show() #.cast(DateType())
 
 
 |comp|
