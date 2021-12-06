@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>15. API Book &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>16. API Book &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="16. Main Reference" href="reference.html" />
-    <link rel="prev" title="14. Model Deployment with Flask" href="deploy.html" /> 
+    <link rel="next" title="17. Main Reference" href="reference.html" />
+    <link rel="prev" title="15. Model Deployment with Flask" href="deploy.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,27 +44,28 @@
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">15. API Book</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basics-module">15.1. Basics Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-statspy.basics">15.1.1. <code class="docutils literal notranslate"><span class="pre">rnorm</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#dnorm">15.1.2. <code class="docutils literal notranslate"><span class="pre">dnorm</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#runif">15.1.3. <code class="docutils literal notranslate"><span class="pre">runif</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">10. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">11. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Kaggle Competitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">16. API Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basics-module">16.1. Basics Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-statspy.basics">16.1.1. <code class="docutils literal notranslate"><span class="pre">rnorm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dnorm">16.1.2. <code class="docutils literal notranslate"><span class="pre">dnorm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#runif">16.1.3. <code class="docutils literal notranslate"><span class="pre">runif</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tests-module">15.2. Tests Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module-statspy.tests">15.2.1. <code class="docutils literal notranslate"><span class="pre">T-test</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tests-module">16.2. Tests Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-statspy.tests">16.2.1. <code class="docutils literal notranslate"><span class="pre">T-test</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">17. Main Reference</a></li>
 </ul>
 
         </div>
@@ -81,7 +82,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">15. </span>API Book</li>
+      <li><span class="section-number">16. </span>API Book</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/api.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -92,12 +93,12 @@
            <div itemprop="articleBody">
              
   <div class="section" id="api-book">
-<span id="api"></span><h1><span class="section-number">15. </span>API Book<a class="headerlink" href="#api-book" title="Permalink to this headline">¶</a></h1>
+<span id="api"></span><h1><span class="section-number">16. </span>API Book<a class="headerlink" href="#api-book" title="Permalink to this headline">¶</a></h1>
 <p>If you developed an amazing library or tool, you need to teach the users how to use it. Now a <code class="docutils literal notranslate"><span class="pre">API</span></code> book is necessary and a good <code class="docutils literal notranslate"><span class="pre">API</span></code> book will save a lot of time for the users. The Sphinx provides an awesome auto <code class="docutils literal notranslate"><span class="pre">API</span></code> book generator. The followings are my statistics python library: <code class="docutils literal notranslate"><span class="pre">statspy</span></code> API demo book:</p>
 <div class="section" id="basics-module">
-<h2><span class="section-number">15.1. </span>Basics Module<a class="headerlink" href="#basics-module" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.1. </span>Basics Module<a class="headerlink" href="#basics-module" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="module-statspy.basics">
-<span id="rnorm"></span><h3><span class="section-number">15.1.1. </span><code class="docutils literal notranslate"><span class="pre">rnorm</span></code><a class="headerlink" href="#module-statspy.basics" title="Permalink to this headline">¶</a></h3>
+<span id="rnorm"></span><h3><span class="section-number">16.1.1. </span><code class="docutils literal notranslate"><span class="pre">rnorm</span></code><a class="headerlink" href="#module-statspy.basics" title="Permalink to this headline">¶</a></h3>
 <dl class="py function">
 <dt id="statspy.basics.rnorm">
 <code class="sig-prename descclassname">statspy.basics.</code><code class="sig-name descname">rnorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">mean</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/statspy/basics.py#L4-L18"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#statspy.basics.rnorm" title="Permalink to this definition">¶</a></dt>
@@ -126,7 +127,7 @@ same functions as rnorm in r: <code class="docutils literal notranslate"><span c
 
 </div>
 <div class="section" id="dnorm">
-<h3><span class="section-number">15.1.2. </span><code class="docutils literal notranslate"><span class="pre">dnorm</span></code><a class="headerlink" href="#dnorm" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.1.2. </span><code class="docutils literal notranslate"><span class="pre">dnorm</span></code><a class="headerlink" href="#dnorm" title="Permalink to this headline">¶</a></h3>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">statspy.basics.</code><code class="sig-name descname">dnorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">mean</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/statspy/basics.py#L20-L37"><span class="viewcode-link">[source]</span></a></dt>
@@ -155,7 +156,7 @@ same functions as rnorm in r: <code class="docutils literal notranslate"><span c
 
 </div>
 <div class="section" id="runif">
-<h3><span class="section-number">15.1.3. </span><code class="docutils literal notranslate"><span class="pre">runif</span></code><a class="headerlink" href="#runif" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">16.1.3. </span><code class="docutils literal notranslate"><span class="pre">runif</span></code><a class="headerlink" href="#runif" title="Permalink to this headline">¶</a></h3>
 <dl class="py function">
 <dt>
 <code class="sig-prename descclassname">statspy.basics.</code><code class="sig-name descname">runif</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em>, <em class="sig-param"><span class="n">min</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">max</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/statspy/basics.py#L39-L52"><span class="viewcode-link">[source]</span></a></dt>
@@ -184,9 +185,9 @@ same functions as rnorm in r: <code class="docutils literal notranslate"><span c
 </div>
 </div>
 <div class="section" id="tests-module">
-<h2><span class="section-number">15.2. </span>Tests Module<a class="headerlink" href="#tests-module" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.2. </span>Tests Module<a class="headerlink" href="#tests-module" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="module-statspy.tests">
-<span id="t-test"></span><h3><span class="section-number">15.2.1. </span><code class="docutils literal notranslate"><span class="pre">T-test</span></code><a class="headerlink" href="#module-statspy.tests" title="Permalink to this headline">¶</a></h3>
+<span id="t-test"></span><h3><span class="section-number">16.2.1. </span><code class="docutils literal notranslate"><span class="pre">T-test</span></code><a class="headerlink" href="#module-statspy.tests" title="Permalink to this headline">¶</a></h3>
 <dl class="py function">
 <dt id="statspy.tests.t_test">
 <code class="sig-prename descclassname">statspy.tests.</code><code class="sig-name descname">t_test</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mu</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">conf_level</span><span class="o">=</span><span class="default_value">0.95</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/statspy/tests.py#L5-L62"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#statspy.tests.t_test" title="Permalink to this definition">¶</a></dt>
@@ -227,15 +228,15 @@ same functions as rnorm in r: <code class="docutils literal notranslate"><span c
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="deploy.html" class="btn btn-neutral float-left" title="14. Model Deployment with Flask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="reference.html" class="btn btn-neutral float-right" title="16. Main Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="deploy.html" class="btn btn-neutral float-left" title="15. Model Deployment with Flask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="reference.html" class="btn btn-neutral float-right" title="17. Main Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 27, 2021.
+      <span class="lastupdated">Last updated on Dec 05, 2021.
       </span></p>
   </div>
 

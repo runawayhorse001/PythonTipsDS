@@ -22,6 +22,7 @@ Contents
    primer
    struct
    ingest
+   s3
    pd
    rdd
    pdrdd
