@@ -23,9 +23,9 @@ Contents
    struct
    ingest
    s3
+   pdrdd
    pd
    rdd
-   pdrdd
    kaggle
    pack
    pypi
