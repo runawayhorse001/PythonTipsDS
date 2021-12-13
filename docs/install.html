@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Python Installation &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>2. Python Environment &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
@@ -38,21 +38,31 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Python Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Python Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#use-python-on-local-computer">2.1. Use python on local computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-python-on-the-cloud-zero-setup">2.2. Use python on the cloud (zero setup)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#google-colab-free">2.2.1. Google Colab (FREE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kaggle-kernels-free">2.2.2. Kaggle Kernels (FREE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#databricks-community-edition-free">2.2.3. Databricks Community Edition (FREE)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">16. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">17. Main Reference</a></li>
 </ul>
 
         </div>
@@ -69,7 +79,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">2. </span>Python Installation</li>
+      <li><span class="section-number">2. </span>Python Environment</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/install.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -79,17 +89,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="python-installation">
-<span id="install"></span><h1><span class="section-number">2. </span>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="python-environment">
+<span id="install"></span><h1><span class="section-number">2. </span>Python Environment<a class="headerlink" href="#python-environment" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This Chapter <a class="reference internal" href="#install"><span class="std std-ref">Python Installation</span></a> is for beginner.  If you have some <code class="docutils literal notranslate"><span class="pre">Python</span></code> programming experience, you may skip this chapter.</p>
+<p>This Chapter <a class="reference internal" href="#install"><span class="std std-ref">Python Environment</span></a> is for beginner.  If you have some <code class="docutils literal notranslate"><span class="pre">Python</span></code>
+programming experience, you may skip this chapter. For beginners, you
+can choose the hard-core way, installing and setting up python in your
+own computer. Alternatively, there is easy route to leverage free online
+data science environment that requires zero setup.</p>
 </div>
-<p>No matter what operator system is, I will strongly recommend you to install <code class="docutils literal notranslate"><span class="pre">Anaconda</span></code> which contains <code class="docutils literal notranslate"><span class="pre">Python</span></code>, <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>, <code class="docutils literal notranslate"><span class="pre">spyder</span></code>, <code class="docutils literal notranslate"><span class="pre">Numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">Scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">Numba</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">DASK</span></code>,
-<code class="docutils literal notranslate"><span class="pre">Bokeh</span></code>, <code class="docutils literal notranslate"><span class="pre">HoloViews</span></code>, <code class="docutils literal notranslate"><span class="pre">Datashader</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, <code class="docutils literal notranslate"><span class="pre">H2O.ai</span></code>, <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code>, <code class="docutils literal notranslate"><span class="pre">CONDA</span></code> and more.</p>
+<div class="section" id="use-python-on-local-computer">
+<h2><span class="section-number">2.1. </span>Use python on local computer<a class="headerlink" href="#use-python-on-local-computer" title="Permalink to this headline">¶</a></h2>
+<p>No matter what operator system is, I will strongly recommend you to install
+<code class="docutils literal notranslate"><span class="pre">Anaconda</span></code> which contains <code class="docutils literal notranslate"><span class="pre">Python</span></code>, <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>, <code class="docutils literal notranslate"><span class="pre">spyder</span></code>, <code class="docutils literal notranslate"><span class="pre">Numpy</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">Numba</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">DASK</span></code>, <code class="docutils literal notranslate"><span class="pre">Bokeh</span></code>, <code class="docutils literal notranslate"><span class="pre">HoloViews</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Datashader</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, <code class="docutils literal notranslate"><span class="pre">H2O.ai</span></code>, <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code>,
+<code class="docutils literal notranslate"><span class="pre">CONDA</span></code> and more.</p>
 <p>Download link: <a class="reference external" href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a></p>
 <div class="figure align-default" id="fig-ana">
 <img alt="_images/anaconda.png" src="_images/anaconda.png" />
+</div>
+</div>
+<div class="section" id="use-python-on-the-cloud-zero-setup">
+<h2><span class="section-number">2.2. </span>Use python on the cloud (zero setup)<a class="headerlink" href="#use-python-on-the-cloud-zero-setup" title="Permalink to this headline">¶</a></h2>
+<p>Learning a new programming language is not easy.
+Luckily, nowadays there are many web-based data science environment available
+that allows one to learn python without downloading or installing python in
+local laptop, you can do almost anything online, including free access to GPUs!</p>
+<div class="section" id="google-colab-free">
+<h3><span class="section-number">2.2.1. </span>Google Colab (FREE)<a class="headerlink" href="#google-colab-free" title="Permalink to this headline">¶</a></h3>
+<p>Quote from the official introduction on Google,
+Colaboratory, or “Colab” for short, is a free Jupyter notebook environment
+that requires no setup, and runs entirely (writing, running, &amp; sharing code)
+within Google Drive.</p>
+<ul class="simple">
+<li><p>Zero configuration/setup required on your own machine!</p></li>
+<li><p>Free access to GPUs and TPUs: code execute on Google’s cloud servers</p></li>
+<li><p>Search and use built-in code snippets</p></li>
+<li><p>Easy sharing (like Google doc)</p></li>
+</ul>
+<div class="figure align-default" id="fig-colab">
+<img alt="_images/google_clob.png" src="_images/google_clob.png" />
+</div>
+</div>
+<div class="section" id="kaggle-kernels-free">
+<h3><span class="section-number">2.2.2. </span>Kaggle Kernels (FREE)<a class="headerlink" href="#kaggle-kernels-free" title="Permalink to this headline">¶</a></h3>
+<p>Kaggle is best known as a platform for data science competitions.
+They also provide a free service called Kernels that can be used independently
+of their competitions.</p>
+<div class="figure align-default" id="fig-kaggle-cloud">
+<img alt="_images/kaggle_cloud.png" src="_images/kaggle_cloud.png" />
+</div>
+<p>There are a few more choices to run the Jupyter Notebook in the cloud. Feel
+free to checkout this article below:
+<a class="reference external" href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/">https://www.dataschool.io/cloud-services-for-jupyter-notebook/</a>
+This blog is posted in March 2019, content maybe a little out of date.
+It does offer great in-depth comparison of the different platforms.</p>
+</div>
+<div class="section" id="databricks-community-edition-free">
+<h3><span class="section-number">2.2.3. </span>Databricks Community Edition (FREE)<a class="headerlink" href="#databricks-community-edition-free" title="Permalink to this headline">¶</a></h3>
+<p>The Databricks Community Edition is the free version of Databricks cloud-based
+big data platform. The users can access a micro-cluster as well as a cluster
+manager and notebook environment. All users can share their notebooks and
+host them free of charge with Databricks.</p>
+<p>The Databricks Community Edition also comes with a rich portfolio of
+award-winning training resources that will be expanded over time, making
+it ideal for developers, data scientists, data engineers and other IT
+professionals to learn Apache Spark. More details can be found at:
+<a class="reference external" href="https://community.cloud.databricks.com">https://community.cloud.databricks.com</a></p>
+<div class="figure align-default" id="fig-community-cloud">
+<img alt="_images/community_cloud.png" src="_images/community_cloud.png" />
+</div>
+</div>
 </div>
 </div>
 
@@ -105,7 +177,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 27, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 

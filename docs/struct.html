@@ -38,7 +38,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
@@ -67,15 +67,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">16. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">17. Main Reference</a></li>
 </ul>
 
         </div>
@@ -110,7 +111,7 @@
 </div>
 <div class="section" id="list">
 <h2><span class="section-number">6.1. </span>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">list</span></code> is one of data sctructures which is heavily using in my daily work.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list</span></code> is one of data structures which is heavily using in my daily work.</p>
 <div class="section" id="create-list">
 <h3><span class="section-number">6.1.1. </span>Create list<a class="headerlink" href="#create-list" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
@@ -124,7 +125,7 @@
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span>
 </pre></div>
@@ -148,7 +149,7 @@ optimal number of the clusters.</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">0.16</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.87</span><span class="p">,</span> <span class="mf">0.59</span><span class="p">]</span>
 </pre></div>
@@ -164,7 +165,7 @@ optimal number of the clusters.</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
 </pre></div>
@@ -234,7 +235,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]]</span>
 </pre></div>
@@ -249,7 +250,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span>
 </pre></div>
@@ -283,7 +284,7 @@ from the example below:</p>
 </div>
 <div class="section" id="dictionary">
 <h2><span class="section-number">6.3. </span>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">dict</span></code> is one of another data sctructures which is heavily using in my daily work. I heavily applied the <code class="docutils literal notranslate"><span class="pre">dict</span></code> in my <code class="docutils literal notranslate"><span class="pre">PyAudit</span></code> package, more details can be found at <a class="reference external" href="https://github.com/runawayhorse001/PyAudit/blob/master/PyAudit/basics.py#L251-L340">PyAudit</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dict</span></code> is one of another data structures which is heavily using in my daily work. I heavily applied the <code class="docutils literal notranslate"><span class="pre">dict</span></code> in my <code class="docutils literal notranslate"><span class="pre">PyAudit</span></code> package, more details can be found at <a class="reference external" href="https://github.com/runawayhorse001/PyAudit/blob/master/PyAudit/basics.py#L251-L340">PyAudit</a>.</p>
 <div class="section" id="create-dict-from-lists">
 <h3><span class="section-number">6.3.1. </span>Create <code class="docutils literal notranslate"><span class="pre">dict</span></code> from lists<a class="headerlink" href="#create-dict-from-lists" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
@@ -301,7 +302,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Car&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Honda&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla&#39;</span><span class="p">]}</span>
       <span class="n">name</span> <span class="n">Age</span>   <span class="n">Sex</span>    <span class="n">Car</span>
@@ -323,7 +324,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Michael</span>
 <span class="n">George</span>
@@ -339,7 +340,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;Michael&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;30&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Car&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Honda&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla&#39;</span><span class="p">])]</span>
 </pre></div>
@@ -360,7 +361,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Car&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Honda&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla&#39;</span><span class="p">]}</span>
 <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Car&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tesla S&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla X&#39;</span><span class="p">]}</span>
@@ -381,7 +382,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Car&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tesla S&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla X&#39;</span><span class="p">]}</span>
 <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Car&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tesla S&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla X&#39;</span><span class="p">],</span> <span class="s1">&#39;Kid&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span> <span class="s1">&#39;Jim&#39;</span><span class="p">]}</span>
@@ -403,7 +404,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Car&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tesla S&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla X&#39;</span><span class="p">],</span> <span class="s1">&#39;Kid&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span> <span class="s1">&#39;Jim&#39;</span><span class="p">]}</span>
 <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Cars&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tesla S&#39;</span><span class="p">,</span> <span class="s1">&#39;Tesla X&#39;</span><span class="p">],</span> <span class="s1">&#39;Kids&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tom&#39;</span><span class="p">,</span> <span class="s1">&#39;Jim&#39;</span><span class="p">]}</span>
@@ -418,7 +419,7 @@ from the example below:</p>
 <h3><span class="section-number">6.4.1. </span>With filter<a class="headerlink" href="#with-filter" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::syntax:</span></code></p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">RESUT</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq</span> <span class="k">if</span> <span class="n">COND</span> <span class="p">]</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">RESULT</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq</span> <span class="k">if</span> <span class="n">COND</span> <span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -430,7 +431,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </pre></div>
@@ -441,7 +442,7 @@ from the example below:</p>
 <h3><span class="section-number">6.4.2. </span>Without filter<a class="headerlink" href="#without-filter" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::syntax:</span></code></p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">RESUT1</span> <span class="k">if</span> <span class="n">COND1</span>  <span class="k">else</span> <span class="n">RESUT2</span> <span class="k">if</span> <span class="n">COND2</span> <span class="k">else</span> <span class="n">RESUT3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">]</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="n">RESULT1</span> <span class="k">if</span> <span class="n">COND1</span>  <span class="k">else</span> <span class="n">RESULT2</span> <span class="k">if</span> <span class="n">COND2</span> <span class="k">else</span> <span class="n">RESULT3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -453,7 +454,7 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Ouput:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Low&#39;</span><span class="p">,</span>
  <span class="s1">&#39;Low&#39;</span><span class="p">,</span>
@@ -485,7 +486,7 @@ from the example below:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 27, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 

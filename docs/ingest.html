@@ -17,7 +17,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. pd.DataFrame manipulation" href="pd.html" />
+    <link rel="next" title="8. Working with AWS S3" href="s3.html" />
     <link rel="prev" title="6. Data Structures" href="struct.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
@@ -46,18 +46,20 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Data Read and Ingestion with DataBase</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data-ingestion-from-local-to-database">7.1. Data Ingestion from Local to DataBase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-read-from-database-to-local">7.2. Data Read from DataBase to Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hive-and-impala-tabel-ingestion">7.3. Hive and Impala Tabel Ingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-to-various-databases-pyodbc">7.3. Connect to various DataBases (<img class="math" src="_images/math/853269010f0d3fd2b334fdce098f1ebef59fed5f.png" alt="pyodbc"/>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hive-and-impala-table-ingestion">7.4. Hive and Impala Table Ingestion</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">16. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">17. Main Reference</a></li>
 </ul>
 
         </div>
@@ -179,8 +181,22 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="hive-and-impala-tabel-ingestion">
-<h2><span class="section-number">7.3. </span>Hive and Impala Tabel Ingestion<a class="headerlink" href="#hive-and-impala-tabel-ingestion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="connect-to-various-databases-pyodbc">
+<h2><span class="section-number">7.3. </span>Connect to various DataBases (<img class="math" src="_images/math/853269010f0d3fd2b334fdce098f1ebef59fed5f.png" alt="pyodbc"/>)<a class="headerlink" href="#connect-to-various-databases-pyodbc" title="Permalink to this headline">¶</a></h2>
+<p>One open source python library <img class="math" src="_images/math/853269010f0d3fd2b334fdce098f1ebef59fed5f.png" alt="pyodbc"/> makes accessing ODBC databases simple.
+For example, it can connect with Google BigQuery, Hive from Ubuntu / Debian, Microsoft Excel, Microsoft SQL Server etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up DSN (database source name) connection</span>
+<span class="kn">import</span> <span class="nn">pyodbc</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;DRIVER={ODBC Driver 17 for SQL Server};SERVER=</span><span class="si">{server}</span><span class="s1">;DATABASE=</span><span class="si">{db}</span><span class="s1">;UID=</span><span class="si">{user}</span><span class="s1">;PWD=</span><span class="si">{password}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">query_string</span> <span class="o">=</span> <span class="s2">&quot;SQL QUERY&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_string</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hive-and-impala-table-ingestion">
+<h2><span class="section-number">7.4. </span>Hive and Impala Table Ingestion<a class="headerlink" href="#hive-and-impala-table-ingestion" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="fig-ali">
 <img alt="_images/ali.png" src="_images/ali.png" />
 </div>
@@ -192,14 +208,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="struct.html" class="btn btn-neutral float-left" title="6. Data Structures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pd.html" class="btn btn-neutral float-right" title="8. pd.DataFrame manipulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="s3.html" class="btn btn-neutral float-right" title="8. Working with AWS S3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 27, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 

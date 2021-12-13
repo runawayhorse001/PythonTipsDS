@@ -109,7 +109,22 @@ Data Read from DataBase to Local
 	      """.format(table_name=table_name)
 	dp = pd.read_sql(sql, conn)
 
-Hive and Impala Tabel Ingestion  
+Connect to various DataBases (`pyodbc`)
++++++++++++++++++++++++++++++++++++++++
+One open source python library `pyodbc` makes accessing ODBC databases simple.
+For example, it can connect with Google BigQuery, Hive from Ubuntu / Debian, Microsoft Excel, Microsoft SQL Server etc.
+
+.. code-block:: python
+
+    # set up DSN (database source name) connection
+    import pyodbc
+    conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER={server};DATABASE={db};UID={user};PWD={password}')
+    query_string = "SQL QUERY"
+
+    import pandas as pd
+    df = pd.read_sql(query_string, conn)
+
+Hive and Impala Table Ingestion
 +++++++++++++++++++++++++++++++
 
 .. _fig_ali:

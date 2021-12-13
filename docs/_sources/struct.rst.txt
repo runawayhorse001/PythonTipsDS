@@ -7,7 +7,7 @@ Data Structures
 .. |nb| replace:: ``Jupyter Notebook``
 .. |py| replace:: ``Python``
 .. |pyc| replace:: ``:: Python Code:``
-.. |out| replace:: ``:: Ouput:``
+.. |out| replace:: ``:: Output:``
 .. |eg| replace:: ``:: Example:``
 .. |syn| replace:: ``::syntax:``
 
@@ -19,7 +19,7 @@ Data Structures
 List
 ++++
 
-``list`` is one of data sctructures which is heavily using in my daily work. 
+``list`` is one of data structures which is heavily using in my daily work.
 
 Create list
 -----------
@@ -182,7 +182,7 @@ A tuple is an assortment of data, separated by commas, which makes it similar to
 Dictionary
 ++++++++++
 
-``dict`` is one of another data sctructures which is heavily using in my daily work. I heavily applied the ``dict`` in my ``PyAudit`` package, more details can be found at `PyAudit`_. 
+``dict`` is one of another data structures which is heavily using in my daily work. I heavily applied the ``dict`` in my ``PyAudit`` package, more details can be found at `PyAudit`_.
 
 Create ``dict`` from lists
 --------------------------
@@ -321,7 +321,7 @@ With filter
 
 	.. code-block:: python
 
-		[ RESUT for x in seq if COND ]
+		[ RESULT for x in seq if COND ]
 
 
 |pyc|
@@ -346,7 +346,7 @@ Without filter
 
 	.. code-block:: python
 
-		[ RESUT1 if COND1  else RESUT2 if COND2 else RESUT3 for x in seq]
+		[ RESULT1 if COND1  else RESULT2 if COND2 else RESULT3 for x in seq]
 
 
 |pyc|

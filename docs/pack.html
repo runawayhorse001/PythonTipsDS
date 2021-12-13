@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12. Package Wrapper &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>13. Package Wrapper &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="13. Publish Package to PyPI" href="pypi.html" />
-    <link rel="prev" title="11. Kaggle Competitions" href="kaggle.html" /> 
+    <link rel="next" title="14. Publish Package to PyPI" href="pypi.html" />
+    <link rel="prev" title="12. Online Courses and Useful Websites" href="kaggle.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,27 +38,28 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Package Wrapper</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#hierarchical-structure">12.1. Hierarchical Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#set-up">12.2. Set Up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">12.3. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#readme">12.4. ReadMe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Package Wrapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hierarchical-structure">13.1. Hierarchical Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up">13.2. Set Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">13.3. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#readme">13.4. ReadMe</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">16. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">17. Main Reference</a></li>
 </ul>
 
         </div>
@@ -75,7 +76,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">12. </span>Package Wrapper</li>
+      <li><span class="section-number">13. </span>Package Wrapper</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/pack.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -86,12 +87,12 @@
            <div itemprop="articleBody">
              
   <div class="section" id="package-wrapper">
-<span id="pack"></span><h1><span class="section-number">12. </span>Package Wrapper<a class="headerlink" href="#package-wrapper" title="Permalink to this headline">¶</a></h1>
+<span id="pack"></span><h1><span class="section-number">13. </span>Package Wrapper<a class="headerlink" href="#package-wrapper" title="Permalink to this headline">¶</a></h1>
 <p>It’s super easy to wrap your own package in Python. I packed some functions which I frequently
 used in my daily work. You can download and install it from <a class="reference external" href="https://runawayhorse001.github.io/statspy/">My ststspy library</a>. The hierarchical
 structure and the directory structure of this package are as follows.</p>
 <div class="section" id="hierarchical-structure">
-<h2><span class="section-number">12.1. </span>Hierarchical Structure<a class="headerlink" href="#hierarchical-structure" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1. </span>Hierarchical Structure<a class="headerlink" href="#hierarchical-structure" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>├── README.md
 ├── __init__.py
 ├── requirements.txt
@@ -111,7 +112,7 @@ structure and the directory structure of this package are as follows.</p>
 <p>From the above hierarchical structure, you will find that you have to have <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> in each directory. I will explain the <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file with the example below:</p>
 </div>
 <div class="section" id="set-up">
-<h2><span class="section-number">12.2. </span>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.2. </span>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
 
 <span class="k">try</span><span class="p">:</span>
@@ -149,7 +150,7 @@ structure and the directory structure of this package are as follows.</p>
 </div>
 </div>
 <div class="section" id="requirements">
-<h2><span class="section-number">12.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>pandas
 numpy
 scipy
@@ -159,7 +160,7 @@ matplotlib
 </div>
 </div>
 <div class="section" id="readme">
-<h2><span class="section-number">12.4. </span>ReadMe<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.4. </span>ReadMe<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># StatsPy</span>
 
 This is my statistics python library repositories.
@@ -199,15 +200,15 @@ python test1.py
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="kaggle.html" class="btn btn-neutral float-left" title="11. Kaggle Competitions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pypi.html" class="btn btn-neutral float-right" title="13. Publish Package to PyPI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="kaggle.html" class="btn btn-neutral float-left" title="12. Online Courses and Useful Websites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pypi.html" class="btn btn-neutral float-right" title="14. Publish Package to PyPI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 27, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 

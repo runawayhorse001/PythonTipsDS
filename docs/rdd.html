@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9. rdd.DataFrame manipulation &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>11. rdd.DataFrame manipulation &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="10. pd.DataFrame vs PySpark DataFrame" href="pdrdd.html" />
-    <link rel="prev" title="8. pd.DataFrame manipulation" href="pd.html" /> 
+    <link rel="next" title="12. Online Courses and Useful Websites" href="kaggle.html" />
+    <link rel="prev" title="10. pd.DataFrame manipulation" href="pd.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,24 +38,25 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">8. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#todo">9.1. TODO..</a></li>
+<li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#todo">11.1. TODO..</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">11. Kaggle Competitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pack.html">12. Package Wrapper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pypi.html">13. Publish Package to PyPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploy.html">14. Model Deployment with Flask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">15. API Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">16. Main Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">16. API Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">17. Main Reference</a></li>
 </ul>
 
         </div>
@@ -72,7 +73,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">9. </span><code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</li>
+      <li><span class="section-number">11. </span><code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/rdd.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -83,13 +84,13 @@
            <div itemprop="articleBody">
              
   <div class="section" id="rdd-dataframe-manipulation">
-<span id="rdd"></span><h1><span class="section-number">9. </span><code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation<a class="headerlink" href="#rdd-dataframe-manipulation" title="Permalink to this headline">¶</a></h1>
+<span id="rdd"></span><h1><span class="section-number">11. </span><code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation<a class="headerlink" href="#rdd-dataframe-manipulation" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This Chapter <a class="reference internal" href="nb.html#nb"><span class="std std-ref">Notebooks</span></a> is for beginner.  If you have some <code class="docutils literal notranslate"><span class="pre">Python</span></code> programming experience, you may skip this chapter.</p>
 </div>
 <div class="section" id="todo">
-<h2><span class="section-number">9.1. </span>TODO..<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>TODO..<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -97,15 +98,15 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pd.html" class="btn btn-neutral float-left" title="8. pd.DataFrame manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pdrdd.html" class="btn btn-neutral float-right" title="10. pd.DataFrame vs PySpark DataFrame" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pd.html" class="btn btn-neutral float-left" title="10. pd.DataFrame manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kaggle.html" class="btn btn-neutral float-right" title="12. Online Courses and Useful Websites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Nov 27, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 
