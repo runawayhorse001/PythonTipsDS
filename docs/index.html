@@ -37,17 +37,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">10. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">11. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Kaggle Competitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
@@ -99,7 +99,16 @@
 <li class="toctree-l2"><a class="reference internal" href="preface.html#feedback-and-suggestions">1.3. Feedback and suggestions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#use-python-on-local-computer">2.1. Use python on local computer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#use-python-on-the-cloud-zero-setup">2.2. Use python on the cloud (zero setup)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install.html#google-colab-free">2.2.1. Google Colab (FREE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#kaggle-kernels-free">2.2.2. Kaggle Kernels (FREE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html#databricks-community-edition-free">2.2.3. Databricks Community Edition (FREE)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="nb.html#nteract">3.1. Nteract</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nb.html#jupyter-notebook-viewer">3.2. Jupyter Notebook Viewer</a></li>
@@ -147,7 +156,8 @@
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ingest.html#data-ingestion-from-local-to-database">7.1. Data Ingestion from Local to DataBase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ingest.html#data-read-from-database-to-local">7.2. Data Read from DataBase to Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ingest.html#hive-and-impala-tabel-ingestion">7.3. Hive and Impala Tabel Ingestion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest.html#connect-to-various-databases-pyodbc">7.3. Connect to various DataBases (<img class="math" src="_images/math/853269010f0d3fd2b334fdce098f1ebef59fed5f.png" alt="pyodbc"/>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingest.html#hive-and-impala-table-ingestion">7.4. Hive and Impala Table Ingestion</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a><ul>
@@ -170,60 +180,61 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pd.html#todo">9.1. TODO..</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#create-dataframe">9.1. Create DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-list">9.1.1. From List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-dict">9.1.2. From Dict</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">10. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rdd.html#todo">10.1. TODO..</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#convert-between-pandas-and-pyspark-dataframe">9.2. Convert between pandas and pyspark DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-pandas-to-pyspark-dataframe">9.2.1. From pandas to pyspark DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-pyspark-to-pandas-dataframe">9.2.2. From pyspark to pandas DataFrame</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pdrdd.html">11. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#create-dataframe">11.1. Create DataFrame</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-list">11.1.1. From List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-dict">11.1.2. From Dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#load-dataframe">9.3. Load DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-database">9.3.1. From DataBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-csv">9.3.2. From <code class="docutils literal notranslate"><span class="pre">.csv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-json">9.3.3. From <code class="docutils literal notranslate"><span class="pre">.json</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#convert-between-pandas-and-pyspark-dataframe">11.2. Convert between pandas and pyspark DataFrame</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-pandas-to-pyspark-dataframe">11.2.1. From pandas to pyspark DataFrame</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-pyspark-to-pandas-dataframe">11.2.2. From pyspark to pandas DataFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#first-n-rows">9.4. First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#column-names">9.5. Column Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#data-types">9.6. Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#replace-data-types">9.7. Replace Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#fill-null">9.8. Fill Null</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#replace-values">9.9. Replace Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#rename-columns">9.10. Rename Columns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#rename-all-columns">9.10.1. Rename all columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#rename-one-or-more-columns">9.10.2. Rename one or more columns</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#load-dataframe">11.3. Load DataFrame</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-database">11.3.1. From DataBase</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-csv">11.3.2. From <code class="docutils literal notranslate"><span class="pre">.csv</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#from-json">11.3.3. From <code class="docutils literal notranslate"><span class="pre">.json</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#drop-columns">9.11. Drop Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#filter">9.12. Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#with-new-column">9.13. With New Column</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#join">9.14. Join</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#left-join">9.14.1. Left Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#right-join">9.14.2. Right Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#inner-join">9.14.3. Inner Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#full-join">9.14.4. Full Join</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#first-n-rows">11.4. First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#column-names">11.5. Column Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#data-types">11.6. Data types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#replace-data-types">11.7. Replace Data types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#fill-null">11.8. Fill Null</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#replace-values">11.9. Replace Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#rename-columns">11.10. Rename Columns</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#rename-all-columns">11.10.1. Rename all columns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#rename-one-or-more-columns">11.10.2. Rename one or more columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#concat-columns">9.15. Concat Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#groupby">9.16. GroupBy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#pivot">9.17. Pivot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#unixtime-to-date">9.18. Unixtime to Date</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#drop-columns">11.11. Drop Columns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#filter">11.12. Filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#with-new-column">11.13. With New Column</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#join">11.14. Join</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#left-join">11.14.1. Left Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#right-join">11.14.2. Right Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#inner-join">11.14.3. Inner Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pdrdd.html#full-join">11.14.4. Full Join</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pd.html#todo">10.1. TODO..</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#concat-columns">11.15. Concat Columns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#groupby">11.16. GroupBy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#pivot">11.17. Pivot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pdrdd.html#unixtime-to-date">11.18. Unixtime to Date</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rdd.html#todo">11.1. TODO..</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Kaggle Competitions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kaggle.html#todo">12.1. TODO..</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kaggle.html#recommended-online-courses">12.1. Recommended online courses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kaggle.html#recommended-online-resources">12.2. Recommended Online Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a><ul>
@@ -281,7 +292,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 05, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 

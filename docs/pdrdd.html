@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11. pd.DataFrame vs PySpark DataFrame &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>9. pd.DataFrame vs PySpark DataFrame &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="12. Kaggle Competitions" href="kaggle.html" />
-    <link rel="prev" title="10. rdd.DataFrame manipulation" href="rdd.html" /> 
+    <link rel="next" title="10. pd.DataFrame manipulation" href="pd.html" />
+    <link rel="prev" title="8. Working with AWS S3" href="s3.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,60 +38,60 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">2. Python Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nb.html">3. Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="confi.html">4. Confidential Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="struct.html">6. Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ingest.html">7. Data Read and Ingestion with DataBase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="s3.html">8. Working with AWS S3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pd.html">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rdd.html">10. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-dataframe">11.1. Create DataFrame</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#from-list">11.1.1. From List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#from-dict">11.1.2. From Dict</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-dataframe">9.1. Create DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#from-list">9.1.1. From List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-dict">9.1.2. From Dict</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#convert-between-pandas-and-pyspark-dataframe">11.2. Convert between pandas and pyspark DataFrame</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#from-pandas-to-pyspark-dataframe">11.2.1. From pandas to pyspark DataFrame</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#from-pyspark-to-pandas-dataframe">11.2.2. From pyspark to pandas DataFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-between-pandas-and-pyspark-dataframe">9.2. Convert between pandas and pyspark DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#from-pandas-to-pyspark-dataframe">9.2.1. From pandas to pyspark DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-pyspark-to-pandas-dataframe">9.2.2. From pyspark to pandas DataFrame</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#load-dataframe">11.3. Load DataFrame</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#from-database">11.3.1. From DataBase</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#from-csv">11.3.2. From <code class="docutils literal notranslate"><span class="pre">.csv</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#from-json">11.3.3. From <code class="docutils literal notranslate"><span class="pre">.json</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-dataframe">9.3. Load DataFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#from-database">9.3.1. From DataBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-csv">9.3.2. From <code class="docutils literal notranslate"><span class="pre">.csv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-json">9.3.3. From <code class="docutils literal notranslate"><span class="pre">.json</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#first-n-rows">11.4. First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#column-names">11.5. Column Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#data-types">11.6. Data types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#replace-data-types">11.7. Replace Data types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fill-null">11.8. Fill Null</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#replace-values">11.9. Replace Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rename-columns">11.10. Rename Columns</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#rename-all-columns">11.10.1. Rename all columns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rename-one-or-more-columns">11.10.2. Rename one or more columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-n-rows">9.4. First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#column-names">9.5. Column Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-types">9.6. Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#replace-data-types">9.7. Replace Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fill-null">9.8. Fill Null</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#replace-values">9.9. Replace Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rename-columns">9.10. Rename Columns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rename-all-columns">9.10.1. Rename all columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rename-one-or-more-columns">9.10.2. Rename one or more columns</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#drop-columns">11.11. Drop Columns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#filter">11.12. Filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#with-new-column">11.13. With New Column</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#join">11.14. Join</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#left-join">11.14.1. Left Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#right-join">11.14.2. Right Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#inner-join">11.14.3. Inner Join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#full-join">11.14.4. Full Join</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drop-columns">9.11. Drop Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter">9.12. Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#with-new-column">9.13. With New Column</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#join">9.14. Join</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#left-join">9.14.1. Left Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#right-join">9.14.2. Right Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inner-join">9.14.3. Inner Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-join">9.14.4. Full Join</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#concat-columns">11.15. Concat Columns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#groupby">11.16. GroupBy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pivot">11.17. Pivot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#unixtime-to-date">11.18. Unixtime to Date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concat-columns">9.15. Concat Columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#groupby">9.16. GroupBy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pivot">9.17. Pivot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unixtime-to-date">9.18. Unixtime to Date</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Kaggle Competitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pd.html">10. <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">11. <code class="docutils literal notranslate"><span class="pre">rdd.DataFrame</span></code> manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kaggle.html">12. Online Courses and Useful Websites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pack.html">13. Package Wrapper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pypi.html">14. Publish Package to PyPI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deploy.html">15. Model Deployment with Flask</a></li>
@@ -113,7 +113,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">11. </span><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></li>
+      <li><span class="section-number">9. </span><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code></li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/runawayhorse001/PythonTipsDS/blob/master/doc/pdrdd.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -124,11 +124,11 @@
            <div itemprop="articleBody">
              
   <div class="section" id="pd-dataframe-vs-pyspark-dataframe">
-<span id="pdrdd"></span><h1><span class="section-number">11. </span><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code><a class="headerlink" href="#pd-dataframe-vs-pyspark-dataframe" title="Permalink to this headline">¶</a></h1>
+<span id="pdrdd"></span><h1><span class="section-number">9. </span><code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> vs <code class="docutils literal notranslate"><span class="pre">PySpark</span> <span class="pre">DataFrame</span></code><a class="headerlink" href="#pd-dataframe-vs-pyspark-dataframe" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="create-dataframe">
-<h2><span class="section-number">11.1. </span>Create DataFrame<a class="headerlink" href="#create-dataframe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Create DataFrame<a class="headerlink" href="#create-dataframe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="from-list">
-<h3><span class="section-number">11.1.1. </span>From List<a class="headerlink" href="#from-list" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.1. </span>From List<a class="headerlink" href="#from-list" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
 <span class="n">col_name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
 </pre></div>
@@ -172,7 +172,7 @@
 </div>
 </div>
 <div class="section" id="from-dict">
-<h3><span class="section-number">11.1.2. </span>From Dict<a class="headerlink" href="#from-dict" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.2. </span>From Dict<a class="headerlink" href="#from-dict" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
         <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]}</span>
@@ -197,9 +197,9 @@
 </div>
 </div>
 <div class="section" id="convert-between-pandas-and-pyspark-dataframe">
-<h2><span class="section-number">11.2. </span>Convert between pandas and pyspark DataFrame<a class="headerlink" href="#convert-between-pandas-and-pyspark-dataframe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Convert between pandas and pyspark DataFrame<a class="headerlink" href="#convert-between-pandas-and-pyspark-dataframe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="from-pandas-to-pyspark-dataframe">
-<h3><span class="section-number">11.2.1. </span>From pandas to pyspark DataFrame<a class="headerlink" href="#from-pandas-to-pyspark-dataframe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.1. </span>From pandas to pyspark DataFrame<a class="headerlink" href="#from-pandas-to-pyspark-dataframe" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.DataFrame pandas_df: DataFrame pandas</span>
 <span class="c1"># rdd.DataFrame. spark_df: DataFrame spark</span>
@@ -210,7 +210,7 @@
 </div>
 </div>
 <div class="section" id="from-pyspark-to-pandas-dataframe">
-<h3><span class="section-number">11.2.2. </span>From pyspark to pandas DataFrame<a class="headerlink" href="#from-pyspark-to-pandas-dataframe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.2. </span>From pyspark to pandas DataFrame<a class="headerlink" href="#from-pyspark-to-pandas-dataframe" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span> <span class="o">=</span> <span class="n">spark_df</span><span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
 <span class="n">pandas_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -219,9 +219,9 @@
 </div>
 </div>
 <div class="section" id="load-dataframe">
-<h2><span class="section-number">11.3. </span>Load DataFrame<a class="headerlink" href="#load-dataframe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Load DataFrame<a class="headerlink" href="#load-dataframe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="from-database">
-<h3><span class="section-number">11.3.1. </span>From DataBase<a class="headerlink" href="#from-database" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.1. </span>From DataBase<a class="headerlink" href="#from-database" title="Permalink to this headline">¶</a></h3>
 <p>Most of time, you need to share your code with your colleagues or release your code for Code Review or Quality assurance(QA). You will definitely do not want to have your <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Information</span></code> in the code. So you can save them
 in login.txt:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>runawayhorse001
@@ -267,7 +267,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="from-csv">
-<h3><span class="section-number">11.3.2. </span>From <code class="docutils literal notranslate"><span class="pre">.csv</span></code><a class="headerlink" href="#from-csv" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.2. </span>From <code class="docutils literal notranslate"><span class="pre">.csv</span></code><a class="headerlink" href="#from-csv" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Comparison:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># pd.DataFrame pandas_df: DataFrame pandas</span>
 <span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Advertising.csv&#39;</span><span class="p">)</span>
@@ -282,7 +282,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="from-json">
-<h3><span class="section-number">11.3.3. </span>From <code class="docutils literal notranslate"><span class="pre">.json</span></code><a class="headerlink" href="#from-json" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.3. </span>From <code class="docutils literal notranslate"><span class="pre">.json</span></code><a class="headerlink" href="#from-json" title="Permalink to this headline">¶</a></h3>
 <p>Data from: <a class="reference external" href="http://api.luftdaten.info/static/v1/data.json">http://api.luftdaten.info/static/v1/data.json</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;data/data.json&quot;</span><span class="p">)</span>
 <span class="n">spark_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="s1">&#39;data/data.json&#39;</span><span class="p">)</span>
@@ -309,7 +309,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="first-n-rows">
-<h2><span class="section-number">11.4. </span>First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows<a class="headerlink" href="#first-n-rows" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>First <code class="docutils literal notranslate"><span class="pre">n</span></code> Rows<a class="headerlink" href="#first-n-rows" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="c1">#</span>
@@ -330,7 +330,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="column-names">
-<h2><span class="section-number">11.5. </span>Column Names<a class="headerlink" href="#column-names" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Column Names<a class="headerlink" href="#column-names" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span><span class="o">.</span><span class="n">columns</span>
 <span class="c1">#</span>
@@ -344,7 +344,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="data-types">
-<h2><span class="section-number">11.6. </span>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.6. </span>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span><span class="o">.</span><span class="n">dtypes</span>
 <span class="c1">#</span>
@@ -361,7 +361,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="replace-data-types">
-<h2><span class="section-number">11.7. </span>Replace Data types<a class="headerlink" href="#replace-data-types" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.7. </span>Replace Data types<a class="headerlink" href="#replace-data-types" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
            <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
            <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
@@ -399,7 +399,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="fill-null">
-<h2><span class="section-number">11.8. </span>Fill Null<a class="headerlink" href="#fill-null" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.8. </span>Fill Null<a class="headerlink" href="#fill-null" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
 <span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
 <span class="n">spark_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
@@ -436,7 +436,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="replace-values">
-<h2><span class="section-number">11.9. </span>Replace Values<a class="headerlink" href="#replace-values" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.9. </span>Replace Values<a class="headerlink" href="#replace-values" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># caution: you need to chose specific col</span>
 <span class="n">pandas_df</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;female&#39;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -457,9 +457,9 @@ PythonTips
 </div>
 </div>
 <div class="section" id="rename-columns">
-<h2><span class="section-number">11.10. </span>Rename Columns<a class="headerlink" href="#rename-columns" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.10. </span>Rename Columns<a class="headerlink" href="#rename-columns" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="rename-all-columns">
-<h3><span class="section-number">11.10.1. </span>Rename all columns<a class="headerlink" href="#rename-all-columns" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.10.1. </span>Rename all columns<a class="headerlink" href="#rename-all-columns" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
 <span class="n">pandas_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -481,7 +481,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="rename-one-or-more-columns">
-<h3><span class="section-number">11.10.2. </span>Rename one or more columns<a class="headerlink" href="#rename-one-or-more-columns" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.10.2. </span>Rename one or more columns<a class="headerlink" href="#rename-one-or-more-columns" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Newspaper&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;Sales&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -527,7 +527,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="drop-columns">
-<h2><span class="section-number">11.11. </span>Drop Columns<a class="headerlink" href="#drop-columns" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.11. </span>Drop Columns<a class="headerlink" href="#drop-columns" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">drop_name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Newspaper&#39;</span><span class="p">,</span><span class="s1">&#39;Sales&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -551,7 +551,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="filter">
-<h2><span class="section-number">11.12. </span>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.12. </span>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Advertising.csv&#39;</span><span class="p">)</span>
 <span class="c1">#</span>
 <span class="n">spark_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;Advertising.csv&#39;</span><span class="p">,</span>
@@ -597,7 +597,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="with-new-column">
-<h2><span class="section-number">11.13. </span>With New Column<a class="headerlink" href="#with-new-column" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.13. </span>With New Column<a class="headerlink" href="#with-new-column" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span><span class="p">[</span><span class="s1">&#39;tv_norm&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pandas_df</span><span class="o">.</span><span class="n">TV</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">pandas_df</span><span class="o">.</span><span class="n">TV</span><span class="p">)</span>
 <span class="n">pandas_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -677,7 +677,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="join">
-<h2><span class="section-number">11.14. </span>Join<a class="headerlink" href="#join" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.14. </span>Join<a class="headerlink" href="#join" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">leftp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span> <span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="s1">&#39;A3&#39;</span><span class="p">],</span>
                     <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">],</span>
                     <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="s1">&#39;C3&#39;</span><span class="p">],</span>
@@ -702,7 +702,7 @@ PythonTips
 </pre></div>
 </div>
 <div class="section" id="left-join">
-<h3><span class="section-number">11.14.1. </span>Left Join<a class="headerlink" href="#left-join" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.14.1. </span>Left Join<a class="headerlink" href="#left-join" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">leftp</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">rightp</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
 <span class="c1">#</span>
@@ -723,7 +723,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="right-join">
-<h3><span class="section-number">11.14.2. </span>Right Join<a class="headerlink" href="#right-join" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.14.2. </span>Right Join<a class="headerlink" href="#right-join" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">leftp</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">rightp</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
 <span class="c1">#</span>
@@ -744,7 +744,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="inner-join">
-<h3><span class="section-number">11.14.3. </span>Inner Join<a class="headerlink" href="#inner-join" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.14.3. </span>Inner Join<a class="headerlink" href="#inner-join" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">leftp</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">rightp</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
 <span class="c1">#</span>
@@ -763,7 +763,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="full-join">
-<h3><span class="section-number">11.14.4. </span>Full Join<a class="headerlink" href="#full-join" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.14.4. </span>Full Join<a class="headerlink" href="#full-join" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">leftp</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">rightp</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">)</span>
 <span class="c1">#</span>
@@ -787,7 +787,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="concat-columns">
-<h2><span class="section-number">11.15. </span>Concat Columns<a class="headerlink" href="#concat-columns" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.15. </span>Concat Columns<a class="headerlink" href="#concat-columns" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
            <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
            <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
@@ -838,7 +838,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="groupby">
-<h2><span class="section-number">11.16. </span>GroupBy<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.16. </span>GroupBy<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pandas_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;col1&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;col2&#39;</span><span class="p">:</span><span class="s1">&#39;min&#39;</span><span class="p">,</span><span class="s1">&#39;col3&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">})</span>
 <span class="c1">#</span>
@@ -857,7 +857,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="pivot">
-<h2><span class="section-number">11.17. </span>Pivot<a class="headerlink" href="#pivot" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.17. </span>Pivot<a class="headerlink" href="#pivot" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">pandas_df</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;col3&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
 <span class="c1">#</span>
@@ -876,7 +876,7 @@ PythonTips
 </div>
 </div>
 <div class="section" id="unixtime-to-date">
-<h2><span class="section-number">11.18. </span>Unixtime to Date<a class="headerlink" href="#unixtime-to-date" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.18. </span>Unixtime to Date<a class="headerlink" href="#unixtime-to-date" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="n">my_list</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;1284101485&quot;</span><span class="p">)],</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;2284101485&quot;</span><span class="p">)],[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;3284101485&quot;</span><span class="p">)]]</span>
@@ -912,15 +912,15 @@ PythonTips
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="rdd.html" class="btn btn-neutral float-left" title="10. rdd.DataFrame manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="kaggle.html" class="btn btn-neutral float-right" title="12. Kaggle Competitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="s3.html" class="btn btn-neutral float-left" title="8. Working with AWS S3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pd.html" class="btn btn-neutral float-right" title="10. pd.DataFrame manipulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 05, 2021.
+      <span class="lastupdated">Last updated on Dec 12, 2021.
       </span></p>
   </div>
 

@@ -13,7 +13,8 @@
 
 .. note::
 
-	This Chapter :ref:`nb` is for beginner.  If you have some |py| programming experience, you may skip this chapter.
+    This Chapter :ref:`nb` is for beginner.  If you have some |py| programming
+    experience, you may skip this chapter.
 
 TODO..
 ++++++
