@@ -3,14 +3,14 @@
 ## 𝐖𝐡𝐚𝐭? 
 The book focuses on ``Python and Pyspark Tips for Data Scientist``, and includes the following topics:
 - Setup python on local computer or on cloud
-- Data 
+- Connect with database
 - Working with AWS S3
 - Python primer function
 - Data Structures: List, Tuple, Dictionary
-- Working with AWS S3
-- Text mining and social media analysis
-- Monte Carlo and MCMC simulation
-- Neural network
+- pandas.DataFrame vs PySpark DataFrame
+- Package Wrapper
+- Model Deployment with Flask
+- API Book
 - Online machine learning Courses and Useful Websites 
 
 ## 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬 📚

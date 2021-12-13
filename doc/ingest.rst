@@ -109,9 +109,9 @@ Data Read from DataBase to Local
 	      """.format(table_name=table_name)
 	dp = pd.read_sql(sql, conn)
 
-Connect to various DataBases (`pyodbc`)
-+++++++++++++++++++++++++++++++++++++++
-One open source python library `pyodbc` makes accessing ODBC databases simple.
+Connect to various DataBases (``pyodbc``)
++++++++++++++++++++++++++++++++++++++++++
+One open source python library ``pyodbc`` makes accessing ODBC databases simple.
 For example, it can connect with Google BigQuery, Hive from Ubuntu / Debian, Microsoft Excel, Microsoft SQL Server etc.
 
 .. code-block:: python
