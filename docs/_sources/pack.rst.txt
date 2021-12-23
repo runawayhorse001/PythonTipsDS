@@ -72,6 +72,38 @@ Set Up
 	      include_package_data=True	      
 	     )
 
+
+.. note::
+
+    If you want to compile the ``conda`` package, you can add the following
+    code in your ``setup.py``:
+
+    1. import ``import distutils.command.bdist_conda``:
+
+    .. code-block:: python
+
+       import distutils.command.bdist_conda
+
+    2. pass the options to setup():
+
+    .. code-block:: python
+
+        distclass=distutils.command.bdist_conda.CondaDistribution)
+
+        # eg
+        setup(
+        name="conda_example",
+        version="1.0",
+        distclass=distutils.command.bdist_conda.CondaDistribution,
+        conda_buildnum=1,)
+
+    Then, you can use the following code in terminal to compile the conda
+    package:
+
+    .. code-block:: python
+
+        python setup.py bdist_conda
+
 Requirements
 ++++++++++++
 
