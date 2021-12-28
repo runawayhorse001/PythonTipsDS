@@ -21,18 +21,19 @@ List
 
 ``list`` is one of data structures which is heavily using in my daily work.
 
-Create list
------------
+Create empty list
+-----------------
 
-1. Create empty list
-
-The empty list is used to initialize a list.  
+The empty list is used to initialize a list.
 
 |pyc|
 
 	.. code-block:: python
-
-		my_list = [] 
+        # list can be defined with square brackets.
+		my_list = []
+		# create empty list with list() constructor
+		# when no parameters are passed
+		my_list = list()
 		type(my_list)
 
 |out|
@@ -177,6 +178,53 @@ Tuple
 +++++
 
 A tuple is an assortment of data, separated by commas, which makes it similar to the Python list, but a tuple is fundamentally different in that a tuple is "immutable." This means that it cannot be changed, modified, or manipulated.
+
+
+Create Tuple
+------------
+
+A tuple is defined in the same way as a list, except that all elements are enclosed in parentheses instead of square brackets.
+To create a tuple of one item, it's required a trailing comma after the item.
+Without the comma, Python just assumes you have an extra pair of parentheses instead of creating a tuple.
+
+|pyc|
+
+    .. code-block:: python
+
+        # initialize an empty tuple by using the tuple function
+        my_tuple = tuple()
+
+        # tuple with one value must include trailing comma
+        my_tuple = ('A', )
+        type(my_tuple)
+
+        # string type if no trailing comma
+        my_str = ('A')
+        type(my_str)
+
+        # convert list to tuple
+        my_list = ['A','B','C']
+        my_tuple = tuple(my_list)
+        type(my_tuple)
+
+|out|
+
+	.. code-block:: python
+
+		tuple
+		str
+		tuple
+
+Assigning Multiple Values At Once with Tuple
+--------------------------------------------
+A cool way of using tuple is to assign multiple values at once.
+
+|eg|
+
+    .. code-block:: python
+
+        (x, y, z) = ('A','B','C')
+        (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)
 
 
 Dictionary

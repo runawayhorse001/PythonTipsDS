@@ -18,7 +18,7 @@ Online Courses and Useful Websites
 Recommended online courses
 ++++++++++++++++++++++++++
 
-There are many open source DS courses. Of course,
+Here is the list of recommended open source DS courses.
 
 +-------------------+-----------------------------------------------------------+---------------------------------------------+
 | Name              |         Description (Level)                               |         Link                                |
