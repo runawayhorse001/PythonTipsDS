@@ -18,12 +18,12 @@ Online Courses and Useful Websites
 Recommended online courses
 ++++++++++++++++++++++++++
 
-There are many open source DS courses. Of course,
+Here is the list of recommended open source DS courses.
 
 +-------------------+-----------------------------------------------------------+---------------------------------------------+
 | Name              |         Description (Level)                               |         Link                                |
 +===================+===========================================================+=============================================+
-| Harvard CS 109a   | Intro to Data Science (Easy)                              |https://harvard-iacs.github.io/2021-CS109A/  |
+| Harvard CS 109a   | Intro to Data Science (Easy)                              | https://harvard-iacs.github.io/2021-CS109A/ |
 +-------------------+-----------------------------------------------------------+---------------------------------------------+
 | NYU DS-GA 1003    | Machine Learning (Intermediate)                           | https://nyu-ds1003.github.io/spring2021/    |
 +-------------------+-----------------------------------------------------------+---------------------------------------------+
@@ -52,3 +52,20 @@ Recommended Online Resources
 +-----------------------------+--------------------------------------------------------------+
 | https://explained.ai/       | Deep explanations of machine learning and related topics.    |
 +-----------------------------+--------------------------------------------------------------+
+
+Free Online E-books
++++++++++++++++++++
+
++----------------------------------------------+------------------------------------------------------------+
+| Book Name                                    |               Link                                         |
++==============================================+============================================================+
+| The Hitchhiker’s Guide to Python             | https://docs.python-guide.org/                             |
++----------------------------------------------+------------------------------------------------------------+
+| Python Programming And Numerical Methods     | https://pythonnumericalmethods.berkeley.edu/               |
++----------------------------------------------+------------------------------------------------------------+
+| Python for Everybody                         | https://www.py4e.com/lessons                               |
++----------------------------------------------+------------------------------------------------------------+
+| Python Data Science Handbook                 | https://jakevdp.github.io/PythonDataScienceHandbook/       |
++----------------------------------------------+------------------------------------------------------------+
+| Introduction to Machine Learning with Python | https://github.com/amueller/introduction_to_ml_with_python |
++----------------------------------------------+------------------------------------------------------------+
