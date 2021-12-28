@@ -23,8 +23,11 @@ These data structures are different in their Mutability and Order, shown in the 
 
     .. figure:: images/data_structures.png
 
-- *You can use curly braces to define a set like this: {1, 2, 3}. However, if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. So to create an empty set, use set().
-- **A dictionary itself is mutable, but each of its individual keys must be immutable. You can find out why here.
+- You can use curly braces to define a set like this: {1, 2, 3}. However,
+  if you leave the curly braces empty like this: {}, Python will instead
+  create an empty dictionary. So to create an empty set, use set().
+- A dictionary itself is mutable, but each of its individual keys must be
+  immutable. You can find out why here.
 
 Reference:
 Data Structures- Lists, Tuples, Dictionaries, and Sets in Python:
