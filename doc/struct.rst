@@ -16,6 +16,20 @@ Data Structures
 
 	This Chapter :ref:`struct` is for beginner.  If you have some |py| programming experience, you may skip this chapter. 
 
+``List``, ``Set``, ``Tuple``, and ``Dictionary`` are most common and basic data structures in Python.
+Here are some basic python commands with these data structure.
+These data structures are different in their Mutability and Order, shown in the image below:
+
+    .. figure:: images/data_structures.png
+
+- *You can use curly braces to define a set like this: {1, 2, 3}. However, if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. So to create an empty set, use set().
+- * *A dictionary itself is mutable, but each of its individual keys must be immutable. You can find out why here.
+
+Reference:
+Data Structures- Lists, Tuples, Dictionaries, and Sets in Python:
+https://medium.com/@aitarurachel/data-structures-with-lists-tuples-dictionaries-and-sets-in-python-612245a712af
+
+
 List
 ++++
 
@@ -28,13 +42,14 @@ The empty list is used to initialize a list.
 
 |pyc|
 
-	.. code-block:: python
+    .. code-block:: python
+
         # list can be defined with square brackets.
-		my_list = []
-		# create empty list with list() constructor
-		# when no parameters are passed
-		my_list = list()
-		type(my_list)
+        my_list = []
+        # create empty list with list() constructor
+        # when no parameters are passed
+        my_list = list()
+        type(my_list)
 
 |out|
 
