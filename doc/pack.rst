@@ -159,4 +159,4 @@ ReadMe
 
 
 
-.. _My ststspy library: https://runawayhorse001.github.io/statspy/
+.. _My statspy library: https://runawayhorse001.github.io/statspy/

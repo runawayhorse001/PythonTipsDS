@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Data Structures &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <title>6. Data Structures &mdash; Python Tips for Data Scientist  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist
+            <img src="_static/logo_h.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -44,13 +48,17 @@
 <li class="toctree-l1"><a class="reference internal" href="primer.html">5. Primer Functions</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">6. Data Structures</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#list">6.1. List</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-list">6.1.1. Create list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-empty-list">6.1.1. Create empty list</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#unpack-list">6.1.2. Unpack list</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#methods-of-list-objects">6.1.3. Methods of list objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#list-append-x-vs-list-extend-iterable">6.1.4. list.append(x) vs. list.extend(iterable)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tuple">6.2. Tuple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuple">6.2. Tuple</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-tuple">6.2.1. Create Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assigning-multiple-values-at-once-with-tuple">6.2.2. Assigning Multiple Values At Once with Tuple</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#dictionary">6.3. Dictionary</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#create-dict-from-lists">6.3.1. Create <code class="docutils literal notranslate"><span class="pre">dict</span></code> from lists</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dict-get">6.3.2. <code class="docutils literal notranslate"><span class="pre">dict.get()</span></code></a></li>
@@ -103,24 +111,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="data-structures">
+  <section id="data-structures">
 <span id="struct"></span><h1><span class="section-number">6. </span>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This Chapter <a class="reference internal" href="#struct"><span class="std std-ref">Data Structures</span></a> is for beginner.  If you have some <code class="docutils literal notranslate"><span class="pre">Python</span></code> programming experience, you may skip this chapter.</p>
 </div>
-<div class="section" id="list">
+<p><code class="docutils literal notranslate"><span class="pre">List</span></code>, <code class="docutils literal notranslate"><span class="pre">Set</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuple</span></code>, and <code class="docutils literal notranslate"><span class="pre">Dictionary</span></code> are most common and basic data structures in Python.
+This chapter will cover some basic python commands with these data structure.</p>
+<p>These data structures are different in their Mutability and Order, shown in the image below:</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="_images/data_structures.png" src="_images/data_structures.png" />
+</figure>
+</div></blockquote>
+<ul class="simple">
+<li><p><a href="#id1"><span class="problematic" id="id2">*</span></a>You can use curly braces to define a set like this: {1, 2, 3}. However, if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. So to create an empty set, use set().</p></li>
+<li><p><a href="#id3"><span class="problematic" id="id4">**</span></a>A dictionary itself is mutable, but each of its individual keys must be immutable. You can find out why here.</p></li>
+</ul>
+<p>Reference:
+Data Structures- Lists, Tuples, Dictionaries, and Sets in Python:
+<a class="reference external" href="https://medium.com/&#64;aitarurachel/data-structures-with-lists-tuples-dictionaries-and-sets-in-python-612245a712af">https://medium.com/&#64;aitarurachel/data-structures-with-lists-tuples-dictionaries-and-sets-in-python-612245a712af</a></p>
+<section id="list">
 <h2><span class="section-number">6.1. </span>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">list</span></code> is one of data structures which is heavily using in my daily work.</p>
-<div class="section" id="create-list">
-<h3><span class="section-number">6.1.1. </span>Create list<a class="headerlink" href="#create-list" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>Create empty list</p></li>
-</ol>
+<section id="create-empty-list">
+<h3><span class="section-number">6.1.1. </span>Create empty list<a class="headerlink" href="#create-empty-list" title="Permalink to this headline">¶</a></h3>
 <p>The empty list is used to initialize a list.</p>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># list can be defined with square brackets.</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># create empty list with list() constructor</span>
+<span class="c1"># when no parameters are passed</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -155,8 +179,8 @@ optimal number of the clusters.</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="unpack-list">
+</section>
+<section id="unpack-list">
 <h3><span class="section-number">6.1.2. </span>Unpack list<a class="headerlink" href="#unpack-list" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
 <blockquote>
@@ -171,8 +195,8 @@ optimal number of the clusters.</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="methods-of-list-objects">
+</section>
+<section id="methods-of-list-objects">
 <h3><span class="section-number">6.1.3. </span>Methods of list objects<a class="headerlink" href="#methods-of-list-objects" title="Permalink to this headline">¶</a></h3>
 <p>Methods of list objects:</p>
 <table class="docutils align-default">
@@ -217,12 +241,12 @@ optimal number of the clusters.</p>
 <td><p>Reverse the elements of the list</p></td>
 </tr>
 <tr class="row-even"><td><p>list. <code class="docutils literal notranslate"><span class="pre">copy()</span></code></p></td>
-<td><p>Return a shallow copy <a class="footnote-reference brackets" href="#f1" id="id1">1</a> of list</p></td>
+<td><p>Return a shallow copy <a class="footnote-reference brackets" href="#f1" id="id5">1</a> of list</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="list-append-x-vs-list-extend-iterable">
+</section>
+<section id="list-append-x-vs-list-extend-iterable">
 <h3><span class="section-number">6.1.4. </span>list.append(x) vs. list.extend(iterable)<a class="headerlink" href="#list-append-x-vs-list-extend-iterable" title="Permalink to this headline">¶</a></h3>
 <p>The difference of list. <code class="docutils literal notranslate"><span class="pre">append(x)</span></code> vs. list. <code class="docutils literal notranslate"><span class="pre">extend(iterable)</span></code> is easy to understand
 from the example below:</p>
@@ -258,34 +282,79 @@ from the example below:</p>
 </div></blockquote>
 <p class="rubric">Footnotes</p>
 <dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
 <dd><p>Shallow Copy vs Deep Copy Reference: <a class="reference external" href="https://stackoverflow.com/posts/184780/revisions">https://stackoverflow.com/posts/184780/revisions</a></p>
 <p>Shallow copy:</p>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="_images/shal.png" src="_images/shal.png" />
-</div>
+</figure>
 </div></blockquote>
 <p>The variables A and B refer to different areas of memory, when B is assigned to A the two variables refer to the same area of memory. Later modifications to the contents of either are instantly reflected in the contents of other, as they share contents.</p>
 <p>Deep Copy:</p>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="_images/deep.png" src="_images/deep.png" />
-</div>
+</figure>
 </div></blockquote>
 <p>The variables A and B refer to different areas of memory, when B is assigned to A the values in the memory area which A points to are copied into the memory area to which B points. Later modifications to the contents of either remain unique to A or B; the contents are not shared.</p>
 </dd>
 </dl>
-</div>
-</div>
-<div class="section" id="tuple">
+</section>
+</section>
+<section id="tuple">
 <h2><span class="section-number">6.2. </span>Tuple<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h2>
 <p>A tuple is an assortment of data, separated by commas, which makes it similar to the Python list, but a tuple is fundamentally different in that a tuple is “immutable.” This means that it cannot be changed, modified, or manipulated.</p>
+<section id="create-tuple">
+<h3><span class="section-number">6.2.1. </span>Create Tuple<a class="headerlink" href="#create-tuple" title="Permalink to this headline">¶</a></h3>
+<p>A tuple is defined in the same way as a list, except that all elements are enclosed in parentheses instead of square brackets.
+To create a tuple of one item, it’s required a trailing comma after the item.
+Without the comma, Python just assumes you have an extra pair of parentheses instead of creating a tuple.</p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Python</span> <span class="pre">Code:</span></code></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize an empty tuple by using the tuple function</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+
+<span class="c1"># tuple with one value must include trailing comma</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>
+
+<span class="c1"># string type if no trailing comma</span>
+<span class="n">my_str</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+
+<span class="c1"># convert list to tuple</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="dictionary">
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Output:</span></code></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">tuple</span>
+<span class="nb">str</span>
+<span class="nb">tuple</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="assigning-multiple-values-at-once-with-tuple">
+<h3><span class="section-number">6.2.2. </span>Assigning Multiple Values At Once with Tuple<a class="headerlink" href="#assigning-multiple-values-at-once-with-tuple" title="Permalink to this headline">¶</a></h3>
+<p>A cool way of using tuple is to assign multiple values at once.</p>
+<p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">MONDAY</span><span class="p">,</span> <span class="n">TUESDAY</span><span class="p">,</span> <span class="n">WEDNESDAY</span><span class="p">,</span> <span class="n">THURSDAY</span><span class="p">,</span> <span class="n">FRIDAY</span><span class="p">,</span> <span class="n">SATURDAY</span><span class="p">,</span> <span class="n">SUNDAY</span><span class="p">)</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="dictionary">
 <h2><span class="section-number">6.3. </span>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">dict</span></code> is one of another data structures which is heavily using in my daily work. I heavily applied the <code class="docutils literal notranslate"><span class="pre">dict</span></code> in my <code class="docutils literal notranslate"><span class="pre">PyAudit</span></code> package, more details can be found at <a class="reference external" href="https://github.com/runawayhorse001/PyAudit/blob/master/PyAudit/basics.py#L251-L340">PyAudit</a>.</p>
-<div class="section" id="create-dict-from-lists">
+<section id="create-dict-from-lists">
 <h3><span class="section-number">6.3.1. </span>Create <code class="docutils literal notranslate"><span class="pre">dict</span></code> from lists<a class="headerlink" href="#create-dict-from-lists" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
 <blockquote>
@@ -311,8 +380,8 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="dict-get">
+</section>
+<section id="dict-get">
 <h3><span class="section-number">6.3.2. </span><code class="docutils literal notranslate"><span class="pre">dict.get()</span></code><a class="headerlink" href="#dict-get" title="Permalink to this headline">¶</a></h3>
 <p>When <code class="docutils literal notranslate"><span class="pre">get()</span></code> is called, Python checks if the specified key exists in the dict. If it does, then <code class="docutils literal notranslate"><span class="pre">get()</span></code> returns the value of that key. If the key does not exist, then <code class="docutils literal notranslate"><span class="pre">get()</span></code> returns the value specified in the second argument to <code class="docutils literal notranslate"><span class="pre">get()</span></code>. A good application of <code class="docutils literal notranslate"><span class="pre">get()</span></code> can be found at <a class="reference internal" href="#update-keys-dict"><span class="std std-ref">Update Keys in Dict</span></a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
@@ -331,8 +400,8 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="looping-techniques">
+</section>
+<section id="looping-techniques">
 <h3><span class="section-number">6.3.3. </span>Looping Techniques<a class="headerlink" href="#looping-techniques" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
 <blockquote>
@@ -346,8 +415,8 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="update-values-in-dict">
+</section>
+<section id="update-values-in-dict">
 <h3><span class="section-number">6.3.4. </span>Update Values in Dict<a class="headerlink" href="#update-values-in-dict" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p>Replace values in dict</p>
@@ -392,8 +461,8 @@ from the example below:</p>
 </div></blockquote>
 </li>
 </ol>
-</div>
-<div class="section" id="update-keys-in-dict">
+</section>
+<section id="update-keys-in-dict">
 <span id="update-keys-dict"></span><h3><span class="section-number">6.3.5. </span>Update Keys in Dict<a class="headerlink" href="#update-keys-in-dict" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::</span> <span class="pre">Example:</span></code></p>
 <blockquote>
@@ -411,11 +480,11 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="one-line-if-else-statement">
+</section>
+</section>
+<section id="one-line-if-else-statement">
 <h2><span class="section-number">6.4. </span>One line if-else statement<a class="headerlink" href="#one-line-if-else-statement" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="with-filter">
+<section id="with-filter">
 <h3><span class="section-number">6.4.1. </span>With filter<a class="headerlink" href="#with-filter" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::syntax:</span></code></p>
 <blockquote>
@@ -437,8 +506,8 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="without-filter">
+</section>
+<section id="without-filter">
 <h3><span class="section-number">6.4.2. </span>Without filter<a class="headerlink" href="#without-filter" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">::syntax:</span></code></p>
 <blockquote>
@@ -469,10 +538,10 @@ from the example below:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p><a class="reference internal" href="reference.html#vanderplas2016" id="id2"><span>[VanderPlas2016]</span></a> <a class="reference internal" href="reference.html#mckinney2013" id="id3"><span>[McKinney2013]</span></a></p>
-</div>
-</div>
-</div>
+<p><a class="reference internal" href="reference.html#vanderplas2016" id="id6"><span>[VanderPlas2016]</span></a> <a class="reference internal" href="reference.html#mckinney2013" id="id7"><span>[McKinney2013]</span></a></p>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -486,7 +555,7 @@ from the example below:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 23, 2021.
+      <span class="lastupdated">Last updated on Dec 28, 2021.
       </span></p>
   </div>
 

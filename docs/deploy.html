@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>15. Model Deployment with Flask &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <title>15. Model Deployment with Flask &mdash; Python Tips for Data Scientist  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist
+            <img src="_static/logo_h.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -90,16 +94,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="model-deployment-with-flask">
+  <section id="model-deployment-with-flask">
 <span id="deploy"></span><h1><span class="section-number">15. </span>Model Deployment with Flask<a class="headerlink" href="#model-deployment-with-flask" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, you’ll learn how to deployment your model with <code class="docutils literal notranslate"><span class="pre">flask</span></code>. The main idea and code (I made some essential modification to make it work for Python 3) are from the Git repo:https://github.com/llSourcell/how_to_deploy_a_keras_model_to_production. So the copyright belongs to the original author.</p>
-<div class="section" id="install-flask">
+<section id="install-flask">
 <h2><span class="section-number">15.1. </span>Install <code class="docutils literal notranslate"><span class="pre">flask</span></code><a class="headerlink" href="#install-flask" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install Flask
 </pre></div>
 </div>
-</div>
-<div class="section" id="train-and-save-your-model">
+</section>
+<section id="train-and-save-your-model">
 <h2><span class="section-number">15.2. </span>Train and Save your model<a class="headerlink" href="#train-and-save-your-model" title="Permalink to this headline">¶</a></h2>
 <p>You can use the following code to train and save your <code class="docutils literal notranslate"><span class="pre">CNN</span></code> model:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#python 2/3 compatibility</span>
@@ -205,8 +209,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saved model to disk&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="deplyment-with-flask">
+</section>
+<section id="deplyment-with-flask">
 <h2><span class="section-number">15.3. </span>Deplyment with Flask<a class="headerlink" href="#deplyment-with-flask" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#our web app framework!</span>
 
@@ -303,24 +307,24 @@
         <span class="c1">#app.run(debug=False)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="lunch-your-app-on-server">
+</section>
+<section id="lunch-your-app-on-server">
 <h2><span class="section-number">15.4. </span>Lunch your app on server<a class="headerlink" href="#lunch-your-app-on-server" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="lunch-the-app">
+<section id="lunch-the-app">
 <h3><span class="section-number">15.4.1. </span>1. Lunch the APP<a class="headerlink" href="#lunch-the-app" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="run-the-app">
+</section>
+<section id="run-the-app">
 <h3><span class="section-number">15.4.2. </span>2. Run the APP<a class="headerlink" href="#run-the-app" title="Permalink to this headline">¶</a></h3>
 <p>Open the browser with: <a class="reference external" href="http://0.0.0.0:5000">http://0.0.0.0:5000</a></p>
-<div class="figure align-default" id="fig-model-cnn">
+<figure class="align-default" id="fig-model-cnn">
 <img alt="_images/cnn.png" src="_images/cnn.png" />
-</div>
-</div>
-</div>
-</div>
+</figure>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -334,7 +338,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 23, 2021.
+      <span class="lastupdated">Last updated on Dec 28, 2021.
       </span></p>
   </div>
 

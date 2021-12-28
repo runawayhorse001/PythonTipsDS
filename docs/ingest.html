@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Data Read and Ingestion with DataBase &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <title>7. Data Read and Ingestion with DataBase &mdash; Python Tips for Data Scientist  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist
+            <img src="_static/logo_h.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -86,9 +90,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="data-read-and-ingestion-with-database">
+  <section id="data-read-and-ingestion-with-database">
 <span id="ingest"></span><h1><span class="section-number">7. </span>Data Read and Ingestion with DataBase<a class="headerlink" href="#data-read-and-ingestion-with-database" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="data-ingestion-from-local-to-database">
+<section id="data-ingestion-from-local-to-database">
 <h2><span class="section-number">7.1. </span>Data Ingestion from Local to DataBase<a class="headerlink" href="#data-ingestion-from-local-to-database" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># User Information</span>
 <span class="k">try</span><span class="p">:</span>
@@ -151,8 +155,8 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="data-read-from-database-to-local">
+</section>
+<section id="data-read-from-database-to-local">
 <h2><span class="section-number">7.2. </span>Data Read from DataBase to Local<a class="headerlink" href="#data-read-from-database-to-local" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># User information</span>
 <span class="k">try</span><span class="p">:</span>
@@ -180,8 +184,8 @@
 <span class="n">dp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="connect-to-various-databases-pyodbc">
+</section>
+<section id="connect-to-various-databases-pyodbc">
 <h2><span class="section-number">7.3. </span>Connect to various DataBases (<img class="math" src="_images/math/853269010f0d3fd2b334fdce098f1ebef59fed5f.png" alt="pyodbc"/>)<a class="headerlink" href="#connect-to-various-databases-pyodbc" title="Permalink to this headline">¶</a></h2>
 <p>One open source python library <img class="math" src="_images/math/853269010f0d3fd2b334fdce098f1ebef59fed5f.png" alt="pyodbc"/> makes accessing ODBC databases simple.
 For example, it can connect with Google BigQuery, Hive from Ubuntu / Debian, Microsoft Excel, Microsoft SQL Server etc.</p>
@@ -194,14 +198,14 @@ For example, it can connect with Google BigQuery, Hive from Ubuntu / Debian, Mic
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_string</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="hive-and-impala-table-ingestion">
+</section>
+<section id="hive-and-impala-table-ingestion">
 <h2><span class="section-number">7.4. </span>Hive and Impala Table Ingestion<a class="headerlink" href="#hive-and-impala-table-ingestion" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="fig-ali">
+<figure class="align-default" id="fig-ali">
 <img alt="_images/ali.png" src="_images/ali.png" />
-</div>
-</div>
-</div>
+</figure>
+</section>
+</section>
 
 
            </div>
@@ -215,7 +219,7 @@ For example, it can connect with Google BigQuery, Hive from Ubuntu / Debian, Mic
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 23, 2021.
+      <span class="lastupdated">Last updated on Dec 28, 2021.
       </span></p>
   </div>
 

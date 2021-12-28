@@ -6,7 +6,7 @@ Package Wrapper
 ===============
 
 It's super easy to wrap your own package in Python. I packed some functions which I frequently 
-used in my daily work. You can download and install it from `My ststspy library`_. The hierarchical 
+used in my daily work. You can download and install it from `My statspy library`_. The hierarchical 
 structure and the directory structure of this package are as follows. 
  
 Hierarchical Structure
@@ -159,4 +159,4 @@ ReadMe
 
 
 
-.. _My ststspy library: https://runawayhorse001.github.io/statspy/
+.. _My statspy library: https://runawayhorse001.github.io/statspy/

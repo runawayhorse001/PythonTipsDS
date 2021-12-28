@@ -16,24 +16,41 @@ Data Structures
 
 	This Chapter :ref:`struct` is for beginner.  If you have some |py| programming experience, you may skip this chapter. 
 
+``List``, ``Set``, ``Tuple``, and ``Dictionary`` are most common and basic data structures in Python.
+This chapter will cover some basic python commands with these data structure.
+
+These data structures are different in their Mutability and Order, shown in the image below:
+
+    .. figure:: images/data_structures.png
+
+- *You can use curly braces to define a set like this: {1, 2, 3}. However, if you leave the curly braces empty like this: {} Python will instead create an empty dictionary. So to create an empty set, use set().
+- **A dictionary itself is mutable, but each of its individual keys must be immutable. You can find out why here.
+
+Reference:
+Data Structures- Lists, Tuples, Dictionaries, and Sets in Python:
+https://medium.com/@aitarurachel/data-structures-with-lists-tuples-dictionaries-and-sets-in-python-612245a712af
+
+
 List
 ++++
 
 ``list`` is one of data structures which is heavily using in my daily work.
 
-Create list
------------
+Create empty list
+-----------------
 
-1. Create empty list
-
-The empty list is used to initialize a list.  
+The empty list is used to initialize a list.
 
 |pyc|
 
-	.. code-block:: python
+    .. code-block:: python
 
-		my_list = [] 
-		type(my_list)
+        # list can be defined with square brackets.
+        my_list = []
+        # create empty list with list() constructor
+        # when no parameters are passed
+        my_list = list()
+        type(my_list)
 
 |out|
 
@@ -177,6 +194,53 @@ Tuple
 +++++
 
 A tuple is an assortment of data, separated by commas, which makes it similar to the Python list, but a tuple is fundamentally different in that a tuple is "immutable." This means that it cannot be changed, modified, or manipulated.
+
+
+Create Tuple
+------------
+
+A tuple is defined in the same way as a list, except that all elements are enclosed in parentheses instead of square brackets.
+To create a tuple of one item, it's required a trailing comma after the item.
+Without the comma, Python just assumes you have an extra pair of parentheses instead of creating a tuple.
+
+|pyc|
+
+    .. code-block:: python
+
+        # initialize an empty tuple by using the tuple function
+        my_tuple = tuple()
+
+        # tuple with one value must include trailing comma
+        my_tuple = ('A', )
+        type(my_tuple)
+
+        # string type if no trailing comma
+        my_str = ('A')
+        type(my_str)
+
+        # convert list to tuple
+        my_list = ['A','B','C']
+        my_tuple = tuple(my_list)
+        type(my_tuple)
+
+|out|
+
+	.. code-block:: python
+
+		tuple
+		str
+		tuple
+
+Assigning Multiple Values At Once with Tuple
+--------------------------------------------
+A cool way of using tuple is to assign multiple values at once.
+
+|eg|
+
+    .. code-block:: python
+
+        (x, y, z) = ('A','B','C')
+        (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)
 
 
 Dictionary

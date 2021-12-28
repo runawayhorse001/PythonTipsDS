@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. Working with AWS S3 &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <title>8. Working with AWS S3 &mdash; Python Tips for Data Scientist  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist
+            <img src="_static/logo_h.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -99,7 +103,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="working-with-aws-s3">
+  <section id="working-with-aws-s3">
 <h1><span class="section-number">8. </span>Working with AWS S3<a class="headerlink" href="#working-with-aws-s3" title="Permalink to this headline">¶</a></h1>
 <p>Many companies chose to save sensitive data in AWS S3. So you may have to deal
 with data with python in Databricks, while python will have many issues to
@@ -108,7 +112,7 @@ set up correctly in Databricks): such as the <code class="docutils literal notra
 function can not use any more; no unified way to upload or download different
 type files, etc. Here, I will provide my way to work in AWS S3 with python in
 Databricks:</p>
-<div class="section" id="credentials">
+<section id="credentials">
 <h2><span class="section-number">8.1. </span>Credentials<a class="headerlink" href="#credentials" title="Permalink to this headline">¶</a></h2>
 <p>I use Security Token Service (STS) to create the credentials to access AWS S3.
 STS enables you to request temporary, limited-privilege credentials for
@@ -123,14 +127,14 @@ authenticate (federated users). More details can be found at:
 <span class="n">credentials</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;Credentials&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="file-upload-to-s3">
+</section>
+<section id="file-upload-to-s3">
 <h2><span class="section-number">8.2. </span>File Upload to S3<a class="headerlink" href="#file-upload-to-s3" title="Permalink to this headline">¶</a></h2>
 <p>The main idea at here is to save the file in memory or a temporary file, then
 use <code class="docutils literal notranslate"><span class="pre">put_object</span></code> to put the file in S3. It’s a little bit tricky to save the
 corresponding formatted file in memory, I will list several common types in the
 examples.</p>
-<div class="section" id="s3-file-upload-function">
+<section id="s3-file-upload-function">
 <h3><span class="section-number">8.2.1. </span><code class="docutils literal notranslate"><span class="pre">s3_file_upload</span></code> Function<a class="headerlink" href="#s3-file-upload-function" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">s3_file_upload</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 
@@ -155,8 +159,8 @@ examples.</p>
         <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="s3-content-type-function">
+</section>
+<section id="s3-content-type-function">
 <h3><span class="section-number">8.2.2. </span><code class="docutils literal notranslate"><span class="pre">s3_content_type</span></code> Function<a class="headerlink" href="#s3-content-type-function" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">s3_content_type</span><span class="p">(</span><span class="n">file_type</span><span class="p">):</span>
     <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="n">png</span><span class="p">:</span><span class="n">image</span><span class="o">/</span><span class="n">png</span><span class="p">}</span>
@@ -671,8 +675,8 @@ zoo:application/octet-stream
 zsh:text/x-script.zsh
 </pre></div>
 </div>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h3><span class="section-number">8.2.3. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code> file</p></li>
@@ -750,14 +754,14 @@ zsh:text/x-script.zsh
 <p class="admonition-title">Note</p>
 <p>The above method also works for <code class="docutils literal notranslate"><span class="pre">.jpeg</span></code> and <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> format.</p>
 </div>
-</div>
-</div>
-<div class="section" id="file-download-from-s3">
+</section>
+</section>
+<section id="file-download-from-s3">
 <h2><span class="section-number">8.3. </span>File Download from S3<a class="headerlink" href="#file-download-from-s3" title="Permalink to this headline">¶</a></h2>
 <p>The main idea is using the s3 resource function to download the file and save
 it at <code class="docutils literal notranslate"><span class="pre">/temp</span></code> as a temporary file, the use the corresponding formatted
 functions to read it.</p>
-<div class="section" id="s3-file-download-function">
+<section id="s3-file-download-function">
 <h3><span class="section-number">8.3.1. </span><code class="docutils literal notranslate"><span class="pre">s3_file_download</span></code> Function<a class="headerlink" href="#s3-file-download-function" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">s3_file_download</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 
@@ -774,8 +778,8 @@ functions to read it.</p>
     <span class="k">return</span> <span class="n">file_name</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h3><span class="section-number">8.3.2. </span>Examples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;my_bucket/***/***/test/test.json&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">file_name</span> <span class="o">=</span> <span class="n">s3_file_download</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
@@ -783,12 +787,12 @@ functions to read it.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="file-management-in-s3">
+</section>
+</section>
+<section id="file-management-in-s3">
 <h2><span class="section-number">8.4. </span>File Management in S3<a class="headerlink" href="#file-management-in-s3" title="Permalink to this headline">¶</a></h2>
 <p>I mainly use my <code class="docutils literal notranslate"><span class="pre">s3_fs</span></code> to help me do the file management in S3.</p>
-<div class="section" id="s3-fs-function">
+<section id="s3-fs-function">
 <h3><span class="section-number">8.4.1. </span><code class="docutils literal notranslate"><span class="pre">s3_fs</span></code> Function<a class="headerlink" href="#s3-fs-function" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">s3_fs</span></code> is mainly based on <code class="docutils literal notranslate"><span class="pre">s3fs</span></code> package. The top-level class
 <code class="docutils literal notranslate"><span class="pre">s3fs</span></code> holds connection information and allows typical file-system style
@@ -803,8 +807,8 @@ More details can be found at:
                           <span class="n">token</span><span class="o">=</span><span class="n">credentials</span><span class="p">[</span><span class="s1">&#39;SessionToken&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3><span class="section-number">8.4.2. </span>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Simple locate and read a file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s3_fs</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="s1">&#39;my-bucket&#39;</span><span class="p">)</span>
@@ -814,9 +818,9 @@ More details can be found at:
 <span class="go">b&#39;UserId\tdate\nuser_id1\t2019-05-02\nuser_id2\t2019-12-02\n&#39;</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -830,7 +834,7 @@ More details can be found at:
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 23, 2021.
+      <span class="lastupdated">Last updated on Dec 28, 2021.
       </span></p>
   </div>
 

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>14. Publish Package to PyPI &mdash; Python Tips for Data Scientist  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" /><link rel="shortcut icon" href="_static/icon.ico"/>
+  <title>14. Publish Package to PyPI &mdash; Python Tips for Data Scientist  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fix_rtd.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/icon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist<img src="_static/logo_h.png" class="logo" alt="Logo"/>
+            <a href="index.html" class="icon icon-home"> Python Tips for Data Scientist
+            <img src="_static/logo_h.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -87,20 +91,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="publish-package-to-pypi">
+  <section id="publish-package-to-pypi">
 <span id="pypi"></span><h1><span class="section-number">14. </span>Publish Package to PyPI<a class="headerlink" href="#publish-package-to-pypi" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, you’ll learn how to upload your own package to PyPI.</p>
-<div class="section" id="register-pypi-account">
+<section id="register-pypi-account">
 <h2><span class="section-number">14.1. </span>Register PyPI account<a class="headerlink" href="#register-pypi-account" title="Permalink to this headline">¶</a></h2>
 <p>If you do not have a PyPI accout, you need to register an account at <a class="reference external" href="https://pypi.org/account/register">https://pypi.org/account/register</a> .</p>
-</div>
-<div class="section" id="install-twine">
+</section>
+<section id="install-twine">
 <h2><span class="section-number">14.2. </span>Install <code class="docutils literal notranslate"><span class="pre">twine</span></code><a class="headerlink" href="#install-twine" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install twine
 </pre></div>
 </div>
-</div>
-<div class="section" id="build-your-package">
+</section>
+<section id="build-your-package">
 <h2><span class="section-number">14.3. </span>Build Your Package<a class="headerlink" href="#build-your-package" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">sdist</span> <span class="n">bdist_wheel</span>
 </pre></div>
@@ -112,8 +116,8 @@
 └── PyAudit-1.0.tar.gz
 </pre></div>
 </div>
-</div>
-<div class="section" id="upload-your-package">
+</section>
+<section id="upload-your-package">
 <h2><span class="section-number">14.4. </span>Upload Your Package<a class="headerlink" href="#upload-your-package" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>twine upload dist/*
 </pre></div>
@@ -123,15 +127,15 @@
 Enter your password:
 </pre></div>
 </div>
-</div>
-<div class="section" id="package-at-pypi">
+</section>
+<section id="package-at-pypi">
 <h2><span class="section-number">14.5. </span>Package at PyPI<a class="headerlink" href="#package-at-pypi" title="Permalink to this headline">¶</a></h2>
 <p>Here is my <code class="docutils literal notranslate"><span class="pre">PyAudit</span></code> package at [PyPI](<a class="reference external" href="https://pypi.org/project/PyAudit">https://pypi.org/project/PyAudit</a>). You can install <code class="docutils literal notranslate"><span class="pre">PyAudit</span></code> using:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install PyAudit
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -145,7 +149,7 @@ Enter your password:
 
   <div role="contentinfo">
     <p>&#169; Copyright 2019, Wenqiang Feng and Jing Yang.
-      <span class="lastupdated">Last updated on Dec 23, 2021.
+      <span class="lastupdated">Last updated on Dec 28, 2021.
       </span></p>
   </div>
 
