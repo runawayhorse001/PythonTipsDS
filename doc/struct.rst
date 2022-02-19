@@ -190,18 +190,16 @@ from the example below:
 
    The variables A and B refer to different areas of memory, when B is assigned to A the values in the memory area which A points to are copied into the memory area to which B points. Later modifications to the contents of either remain unique to A or B; the contents are not shared. 
 
-Reference:
-Python: Assignment vs Shallow Copy vs Deep Copy
-https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86
+.. [#f2] Python: Assignment vs Shallow Copy vs Deep Copy: https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86
 
-- For simple lists such as a list of integers:
-    - Use assignment = if you want the new changes to affect the original list.
-    - Use shallow copy [:] or .copy() if you do not want the new changes to affect the original list.
+    - For simple lists such as a list of integers:
+        - Use assignment = if you want the new changes to affect the original list.
+        - Use shallow copy [:] or .copy() if you do not want the new changes to affect the original list.
 
-- For compound objects (e.g. a list of lists):
-    - Use assignment = if you want the new changes to affect the original list.
-    - Use deep copy if you do not want the new changes to affect the original list.
-    - Remember: deep copy makes sure that the newly copied object is not referenced to the original object in any way.
+    - For compound objects (e.g. a list of lists):
+        - Use assignment = if you want the new changes to affect the original list.
+        - Use deep copy if you do not want the new changes to affect the original list.
+        - Remember: deep copy makes sure that the newly copied object is not referenced to the original object in any way.
 
 
 
